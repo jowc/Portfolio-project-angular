@@ -1,0 +1,17 @@
+.link {
+  &-active,
+  &-hover {
+    @apply bg-primary-500 text-white py-3 cursor-pointer;
+  }
+  &-inactive {
+    @apply text-gray-700 bg-white py-3 cursor-pointer;
+  }
+}
+
+.inactive {
+  @apply text-gray-700 bg-white py-3 cursor-pointer;
+}
+
+.hover-menu {
+  @apply bg-primary-500 text-white py-3 cursor-pointer;
+}

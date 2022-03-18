@@ -1,1 +1,77 @@
-<p>header works!</p>
+<nav class="relative font-mont">
+    <div class="w-full bg-white fixed top-0 overflow-hidden">
+
+        <div class="py-4 border border-b-2 border-gray-100">
+
+            <div class="cont flex justify-between items-start">
+
+                <section class="w-4/12 md:w-3/12">
+                    <img class="w-[114px] md:w-[160px]" src="assets/joecdevlogo1.png" alt="joecdevlogo">
+                </section>
+
+                <section class="w-3/12 hidden md:block text-left">
+                    <span class="leading-3 text-gray-500 font-medium">Web <br> Developer</span>
+                </section>
+
+                <section class="w-6/12 self-center">
+                    <span class="font-bold">
+                        <a href="mailto:joecdev@gmail.com">joecdev@gmail.com</a>
+                    </span>
+                </section>
+
+                <section class="w-1/12 -700 self-center flex justify-end">
+
+                    <div class="cursor-pointer" (click)="toggleMenu()">
+
+                        <ng-container *ngIf="!isOpen; else menuCancel;">
+                            <svg class="fill-gray-600" width="24px" height="24px" viewBox="0 0 24 24" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path d="M4 7H12M20 7H16M4 12H20M4 17H8M20 17H12" stroke="#001A72" stroke-width="1.5"
+                                    stroke-linecap="round" stroke-linejoin="round" />
+                            </svg>
+                        </ng-container>
+                        <ng-template #menuCancel>
+                            <img class="w-4" src="assets/close-svgrepo-com.svg" alt="menu-close">
+                        </ng-template>
+
+                    </div>
+
+
+                </section>
+            </div>
+
+
+        </div>
+
+        <ng-container *ngIf="isOpen">
+            <div class="w-full border-b-2 border-gray-100 h-2/6">
+
+                <div class="text-center font-medium grid">
+
+                    <div class="inactive hover:hover-menu" [routerLink]="['']" routerLinkActive="link-active"
+                        [routerLinkActiveOptions]="{exact:true}">
+                        <span>Home</span>
+                    </div>
+
+                    <div class="inactive hover:hover-menu" [routerLink]="['/']" fragment="Projects"
+                        routerLinkActive="link-active" [routerLinkActiveOptions]="{exact:true}">
+                        <span>Projects</span>
+                    </div>
+
+                    <div class="inactive hover:hover-menu" [routerLink]="['/blog']" routerLinkActive="link-active"
+                        [routerLinkActiveOptions]="{exact:true}">
+                        <span>Blog</span>
+                    </div>
+
+                    <div class="inactive hover:hover-menu" [routerLink]="['/contact']" routerLinkActive="link-active"
+                        [routerLinkActiveOptions]="{exact:true}">
+                        <span>Contact</span>
+                    </div>
+
+                </div>
+            </div>
+        </ng-container>
+
+    </div>
+
+</nav>

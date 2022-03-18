@@ -6,7 +6,19 @@ module.exports = {
     './src/**/*.{js,ts,html}',
   ],
   theme: {
-    extend: {},
+    extend: {
+      fontFamily: {
+        'mont': 'Montserrat',
+        'ubuntu': 'Ubuntu',
+      },
+      colors: {
+        'primary' : {
+          500 : '#6619cc',
+          100 : '#b9b0c4bd'
+        },
+        'accent' : '#cc3366',
+      }
+    },
   },
   plugins: [],
 }
