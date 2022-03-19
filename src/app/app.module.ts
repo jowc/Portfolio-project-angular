@@ -10,9 +10,7 @@ import { AppComponent } from './app.component';
 import { SharedModule } from './shared/shared.module';
 import { BlogModule } from './blog/blog.module';
 import { AdminModule } from './admin/admin.module';
-
-import { HomeComponent } from './pages/home/home.component';
-import { ContactComponent } from './pages/contact/contact.component';
+import { PagesModule } from './pages/pages.module';
 
 
 
@@ -25,8 +23,6 @@ export function playerFactory() {
 @NgModule({
   declarations: [
     AppComponent,
-    HomeComponent,
-    ContactComponent,
   ],
   imports: [
     BrowserModule,
@@ -35,6 +31,7 @@ export function playerFactory() {
     SharedModule,
     BlogModule,
     AdminModule,
+    PagesModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
