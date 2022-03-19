@@ -6,7 +6,8 @@
             <div class="cont flex justify-between items-start">
 
                 <section class="w-4/12 md:w-3/12">
-                    <img class="w-[114px] md:w-[160px]" src="assets/joecdevlogo1.png" alt="joecdevlogo">
+                    <img class="w-[114px] md:w-[160px] cursor-pointer" src="assets/joecdevlogo1.png" alt="joecdevlogo"
+                        routerLink="/">
                 </section>
 
                 <section class="w-3/12 hidden md:block text-left">
@@ -43,27 +44,28 @@
 
         </div>
 
+        <!-- Drop-Down Menu -->
         <ng-container *ngIf="isOpen">
             <div class="w-full border-b-2 border-gray-100 h-2/6">
 
                 <div class="text-center font-medium grid">
 
-                    <div class="inactive hover:hover-menu" [routerLink]="['']" routerLinkActive="link-active"
+                    <div class="inactive hover-menu" routerLink="/" routerLinkActive="active"
                         [routerLinkActiveOptions]="{exact:true}">
                         <span>Home</span>
                     </div>
 
-                    <div class="inactive hover:hover-menu" [routerLink]="['/']" fragment="Projects"
-                        routerLinkActive="link-active" [routerLinkActiveOptions]="{exact:true}">
+                    <div class="inactive hover-menu" routerLink="/" fragment="Projects"
+                        [class.active]="(activeFragment | async)==='Projects'">
                         <span>Projects</span>
                     </div>
 
-                    <div class="inactive hover:hover-menu" [routerLink]="['/blog']" routerLinkActive="link-active"
+                    <div class="inactive hover-menu" routerLink="/blog" routerLinkActive="active"
                         [routerLinkActiveOptions]="{exact:true}">
                         <span>Blog</span>
                     </div>
 
-                    <div class="inactive hover:hover-menu" [routerLink]="['/contact']" routerLinkActive="link-active"
+                    <div class="inactive hover-menu" routerLink="/contact" routerLinkActive="active"
                         [routerLinkActiveOptions]="{exact:true}">
                         <span>Contact</span>
                     </div>
