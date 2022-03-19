@@ -1,0 +1,9 @@
+section,
+div {
+  @apply border-2 border-red-600;
+}
+
+#heroImage {
+  background: url("../../../assets/magicpattern-blob1.png");
+  @apply bg-center bg-cover bg-no-repeat;
+}

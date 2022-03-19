@@ -12,7 +12,7 @@ body {
     @apply font-mont;
   }
   h1 {
-    @apply text-3xl md:text-5xl font-semibold;
+    @apply text-2xl md:text-4xl font-semibold;
   }
   h2 {
     @apply text-2xl md:text-4xl font-semibold;
@@ -46,4 +46,8 @@ body {
 
 .cont {
   @apply mx-4 md:mx-8 xl:max-w-7xl xl:mx-auto;
+}
+
+.contCards {
+  @apply mx-4 md:mx-8 xl:max-w-3xl xl:mx-auto;
 }
