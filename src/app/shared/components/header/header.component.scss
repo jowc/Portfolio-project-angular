@@ -1,9 +1,9 @@
 .active {
-  @apply bg-primary-500 font-semibold text-white py-3 cursor-pointer;
+  @apply bg-primary-500 font-semibold text-white py-3 cursor-pointer transition-colors;
 }
 
 .inactive {
-  @apply text-gray-700 bg-white py-3 cursor-pointer;
+  @apply bg-white;
 }
 
 .hover-menu {

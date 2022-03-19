@@ -50,22 +50,21 @@
 
                 <div class="text-center font-medium grid">
 
-                    <div class="inactive hover-menu" routerLink="/" routerLinkActive="active"
-                        [routerLinkActiveOptions]="{exact:true}">
+                    <div class="hover-menu" routerLink="/" fragment="" [class.active]="(activeFragment | async)=== ''">
                         <span>Home</span>
                     </div>
 
-                    <div class="inactive hover-menu" routerLink="/" fragment="Projects"
+                    <div class="hover-menu" routerLink="/" fragment="Projects"
                         [class.active]="(activeFragment | async)==='Projects'">
                         <span>Projects</span>
                     </div>
 
-                    <div class="inactive hover-menu" routerLink="/blog" routerLinkActive="active"
+                    <div class="hover-menu" routerLink="/blog" routerLinkActive="active"
                         [routerLinkActiveOptions]="{exact:true}">
                         <span>Blog</span>
                     </div>
 
-                    <div class="inactive hover-menu" routerLink="/contact" routerLinkActive="active"
+                    <div class="hover-menu" routerLink="/contact" routerLinkActive="active"
                         [routerLinkActiveOptions]="{exact:true}">
                         <span>Contact</span>
                     </div>
