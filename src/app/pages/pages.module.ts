@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { RouterModule } from '@angular/router';
 
 import { NgParticlesModule } from "ng-particles";
 
@@ -17,6 +18,7 @@ import { ContactComponent } from './contact/contact.component';
   ],
   imports: [
     CommonModule,
+    RouterModule,
     NgParticlesModule,
   ]
 })

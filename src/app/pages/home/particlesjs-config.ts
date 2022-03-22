@@ -22,7 +22,7 @@ export const particleOptionsJSON: any = {
       "image": {
         "src": "img/github.svg",
         "width": 10,
-        "height": 10
+        "height": 4
       }
     },
     "opacity": {
@@ -46,7 +46,7 @@ export const particleOptionsJSON: any = {
       }
     },
     "line_linked": {
-      "enable": false,
+      "enable": true,
       "distance": 200,
       "color": "#ffffff",
       "opacity": 1,
@@ -54,7 +54,7 @@ export const particleOptionsJSON: any = {
     },
     "move": {
       "enable": true,
-      "speed": 8,
+      "speed": 3,
       "direction": "none",
       "random": false,
       "straight": false,
@@ -71,11 +71,11 @@ export const particleOptionsJSON: any = {
     "detect_on": "canvas",
     "events": {
       "onhover": {
-        "enable": false,
-        "mode": "grab"
+        "enable": true,
+        "mode": "repulse"
       },
       "onclick": {
-        "enable": false,
+        "enable": true,
         "mode": "push"
       },
       "resize": true
@@ -88,11 +88,11 @@ export const particleOptionsJSON: any = {
         }
       },
       "bubble": {
-        "distance": 400,
+        "distance": 200,
         "size": 40,
         "duration": 2,
-        "opacity": 8,
-        "speed": 3
+        "opacity": 1,
+        "speed": 1
       },
       "repulse": {
         "distance": 200,
@@ -106,5 +106,6 @@ export const particleOptionsJSON: any = {
       }
     }
   },
-  "retina_detect": true
+  "retina_detect": true,
+  // "fullScreen": { 'enable': true }
 }

@@ -1,5 +1,9 @@
 @use "./tailwind.css";
 
+.debug {
+  @apply border border-red-500;
+}
+
 body {
   @apply font-ubuntu text-gray-800;
 
@@ -49,5 +53,5 @@ body {
 }
 
 .contCards {
-  @apply mx-4 md:mx-8 xl:max-w-3xl xl:mx-auto;
+  @apply mx-4 md:mx-8 xl:max-w-4xl;
 }

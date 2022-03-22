@@ -1,17 +1,20 @@
-<section class="mt-16 md:mt-20" #heroContainer>
-    <ng-particles [id]="id" [options]="particlesOptions"></ng-particles>
+<!-- Hero Section -->
+<section id="hero" class="mt-16 md:mt-20 relative" #heroContainer>
+    <!-- <ng-particles id="heroCont" [options]="particlesOptions" (particlesLoaded)="particlesLoaded($event)">
+    </ng-particles> -->
 
     <!-- Hero Container -->
     <section class="py-12 md:py-32" #hero>
         <div class="cont">
 
-            <div class="flex flex-col-reverse md:flex-row contCards">
+            <div class="flex flex-col-reverse md:flex-row contCards xl:mx-auto">
 
                 <div class="mt-3 md:mt-0 text-center md:text-left 
-                    flex flex-col justify-center items-center md:items-start md:w-3/5">
+                        flex flex-col justify-center items-center md:items-start md:w-3/5">
                     <h1>Joseph Ojiofor <br> Chikeme</h1>
                     <h4 class="mt-3">Web Developer</h4>
-                    <p class="mt-6 mx-4 md:ml-0 md:mr-32">Continually deliver enterprise benefits rather than compelling
+                    <p class="mt-6 mx-4 md:ml-0 md:mr-32">Continually deliver enterprise benefits rather than
+                        compelling
                         systems.</p>
                     <button class="mt-9 md:mt-12 w-fit">Let's Chat</button>
                 </div>
@@ -25,5 +28,128 @@
 
         </div>
     </section>
+
+</section>
+
+
+<!-- Skills Section -->
+<section class="mt-2">
+
+    <section class="flex justify-center">
+        <section class="w-full contCards md:ml-14 bg-pink-100 rounded-3xl shadow-lg p-7 md:p-14">
+            <div class="flex flex-col md:flex-row justify-between">
+                <div class="w-full md:w-1/2">
+                    <img src="" alt="icon here">
+                    <h3 class="mt-4 md:mt-8">Skills</h3>
+                    <p class="mt-3">Synergistically facilitate prospective communities without 24/7 core competencies.
+                    </p>
+                    <h5 routerlink="/#Projects" class="mt-4 md:mt-8 block cursor-pointer">See Projects</h5>
+                </div>
+                <div class="w-full flex justify-end md:w-1/2">
+                    lottie here
+                </div>
+            </div>
+        </section>
+    </section>
+
+
+</section>
+
+<!-- Works Section -->
+<section class="mt-16 md:mt-24 flex justify-center">
+
+    <section class="w-full contCards debug">
+
+        <div>
+            <h3>Works</h3>
+            <h6>Featured projects</h6>
+        </div>
+
+        <div class="mt-8 grid md:grid-cols-2 lg:grid-cols-3 gap-4 rounded-lg">
+            <div>
+                <div><img src="" alt="project image"></div>
+                <div class="p-4">
+                    <div>chips</div>
+                    <div>
+                        <p>Dramatically recaptiualize competitive web-readiness via reliable benefits. Efficiently.</p>
+
+                        <div class="text-right mt-2">
+                            <ng-container *ngIf="true; else pLink">
+                                <span>Read more</span>
+                            </ng-container>
+                            <ng-template #pLink>
+                                <span href="#">Visit</span>
+                            </ng-template>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div>
+            <button>Load More</button>
+        </div>
+
+    </section>
+
+
+</section>
+
+<!-- Photography Section -->
+<section class="mt-16 md:mt-24 flex justify-center">
+
+    <section class="w-full contCards debug">
+
+        <div>
+            <h3>Photography & Art</h3>
+            <h6>I love art and photography.</h6>
+        </div>
+
+        <div class="mt-8">
+            photography slides here
+        </div>
+    </section>
+
+
+</section>
+
+
+<!-- Technologies Section -->
+<section class="mt-16 md:mt-24 flex justify-center">
+
+    <section class="w-full contCards debug">
+
+        <div>
+            <h3>Technologies</h3>
+            <h6>Framework & tools I use...</h6>
+        </div>
+
+        <div class="mt-8">
+            images here
+        </div>
+    </section>
+
+
+</section>
+
+
+<!-- CTA Section -->
+<section class="mt-16 md:mt-24 mb-48">
+
+    <section class="flex justify-center">
+        <section class="w-full contCards md:ml-14 bg-purple-100 rounded-3xl shadow-lg p-7 md:p-14">
+            <div class="flex flex-col md:flex-row justify-between">
+                <div class="w-full md:w-1/2">
+                    <h3 class="mt-4 md:mt-8">Work Inquiry</h3>
+                    <p class="mt-3">Get in touch and let's discuss.
+                    </p>
+                </div>
+                <div class="mt-4 w-full flex justify-start md:w-1/2">
+                    <button class="bg-primary-500" routerLink="contact"> Let's Chat </button>
+                </div>
+            </div>
+        </section>
+    </section>
+
 
 </section>
