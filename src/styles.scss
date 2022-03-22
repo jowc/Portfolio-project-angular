@@ -9,7 +9,7 @@ html {
 }
 
 body {
-  @apply font-ubuntu text-gray-800;
+  @apply font-ubuntu text-gray-800 h-full;
 
   h1,
   h2,
@@ -62,4 +62,8 @@ body {
 
 .bgColor {
   @apply bg-white;
+}
+
+.projCard {
+  @apply max-w-md;
 }

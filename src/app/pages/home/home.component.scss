@@ -4,8 +4,8 @@ div {
 }
 
 #heroImage {
-  background: url("../../../assets/magicpattern-blob1.png");
-  @apply bg-center bg-cover bg-no-repeat;
+  background: url("../../../assets/blop.svg");
+  @apply bg-center bg-contain bg-no-repeat;
 }
 
 #heroCont {
