@@ -1,5 +1,9 @@
 @use "./tailwind.css";
 
+html {
+  @apply scroll-smooth;
+}
+
 .debug {
   @apply border border-red-500;
 }
@@ -53,5 +57,9 @@ body {
 }
 
 .contCards {
-  @apply mx-4 md:mx-8 xl:max-w-4xl;
+  @apply mx-5 md:mx-8 xl:max-w-[800px];
+}
+
+.bgColor {
+  @apply bg-white;
 }
