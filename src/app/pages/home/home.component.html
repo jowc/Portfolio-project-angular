@@ -22,7 +22,7 @@
 
                 <div #heroImage id="heroImage">
                     <img class="flex mx-auto md:mx-0 md:justify-self-start w-2/4 md:w-full"
-                        src="assets/cartoonized-joe.png" alt="Joseph Chikeme cartoonized">
+                        src="assets/cartoonized-joe.png" alt="Joseph Chikeme cartoonized" loading="lazy">
                 </div>
 
             </div>
@@ -69,27 +69,7 @@
         </div>
 
         <div class="mt-8 grid md:grid-cols-2 lg:grid-cols-3 gap-4">
-            <div class="rounded-lg mx-4 sm:projCard shadow-md overflow-hidden">
-                <div class="h-36">
-                    <img class="w-full h-full object-cover object-center" src="assets/media/fardelins-dashboard.png"
-                        alt="project image">
-                </div>
-                <div class="p-4">
-                    <div>chips</div>
-                    <div>
-                        <p>Dramatically recaptiualize competitive web-readiness via reliable benefits. Efficiently</p>
-
-                        <div class="text-right mt-2">
-                            <ng-container *ngIf="true; else pLink">
-                                <span>Read more</span>
-                            </ng-container>
-                            <ng-template #pLink>
-                                <span href="#">Visit</span>
-                            </ng-template>
-                        </div>
-                    </div>
-                </div>
-            </div>
+            <app-projects-card></app-projects-card>
         </div>
 
         <div class="mt-8">

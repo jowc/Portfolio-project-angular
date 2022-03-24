@@ -4,6 +4,7 @@ import { RouterModule } from '@angular/router';
 
 import { FooterComponent } from './components/footer/footer.component';
 import { HeaderComponent } from './components/header/header.component';
+import { ProjectsCardComponent } from './components/projects-card/projects-card.component';
 
 
 
@@ -11,7 +12,8 @@ import { HeaderComponent } from './components/header/header.component';
 @NgModule({
   declarations: [
     HeaderComponent,
-    FooterComponent
+    FooterComponent,
+    ProjectsCardComponent
   ],
   imports: [
     CommonModule,
@@ -19,7 +21,8 @@ import { HeaderComponent } from './components/header/header.component';
   ],
   exports: [
     HeaderComponent,
-    FooterComponent
+    FooterComponent,
+    ProjectsCardComponent
   ]
 })
 export class SharedModule { }
