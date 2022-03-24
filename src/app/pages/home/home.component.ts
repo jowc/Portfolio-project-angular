@@ -1,6 +1,9 @@
-import { AfterViewInit, Component, ElementRef, OnInit, ViewChild } from '@angular/core';
+import { AfterViewInit, Component, ElementRef, OnDestroy, OnInit, ViewChild } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { AnimationOptions } from 'ngx-lottie';
+import { Observable, of, Subscription } from 'rxjs';
+import { projects } from 'src/app/store/api';
+import { projectModel } from 'src/app/store/models';
 import { Container, Main } from 'tsparticles';
 import { particleOptionsJSON } from './particlesjs-config'
 
@@ -9,10 +12,11 @@ import { particleOptionsJSON } from './particlesjs-config'
   templateUrl: './home.component.html',
   styleUrls: ['./home.component.scss']
 })
-export class HomeComponent implements AfterViewInit, OnInit {
+export class HomeComponent implements AfterViewInit, OnInit, OnDestroy {
   id = "z";
   @ViewChild('heroContainer')
   div!: ElementRef<HTMLElement>;
+  // projects!: Observable<projectModel[]>;
 
   /* or the classic JavaScript object */
   particlesOptions: any = particleOptionsJSON
@@ -36,6 +40,11 @@ export class HomeComponent implements AfterViewInit, OnInit {
       }
     })
 
+    this.getProjects()
+  }
+
+  ngOnDestroy(): void {
+    // this.projects.unsubscribe()
   }
 
   ngAfterViewInit(): void {
@@ -57,6 +66,10 @@ export class HomeComponent implements AfterViewInit, OnInit {
 
   scroll(el: any) {
     el.scrollIntoView();
+  }
+
+  getProjects() {
+    return of(projects).subscribe(data => console.log(data))
   }
 
 }

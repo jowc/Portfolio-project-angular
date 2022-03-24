@@ -43,8 +43,9 @@ body {
     @apply text-gray-700;
   }
 
-  input {
-    @apply p-2 bg-purple-50 text-primary-100 font-medium border-2 border-solid rounded-lg focus:outline-none shadow-sm;
+  input,
+  textarea {
+    @apply p-2 bg-gray-50 text-gray-700 font-medium border-2 border-solid rounded-lg focus:outline-none shadow-sm;
   }
 
   button {
