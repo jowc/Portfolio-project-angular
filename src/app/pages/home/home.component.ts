@@ -25,6 +25,10 @@ export class HomeComponent implements AfterViewInit, OnInit, OnDestroy {
     path: 'https://assets2.lottiefiles.com/packages/lf20_m3lpL4.json',
   };
 
+  catMaskLottie: AnimationOptions = {
+    path: 'https://assets3.lottiefiles.com/packages/lf20_sDO0PX.json',
+  };
+
   dogLottie: AnimationOptions = {
     path: 'https://assets2.lottiefiles.com/packages/lf20_5JFpAw.json',
   };

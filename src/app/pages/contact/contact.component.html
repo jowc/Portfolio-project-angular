@@ -1,8 +1,11 @@
-<section id="hero" class="my-16 mt-28 md:my-28 md:mt-40 relative" #heroContainer>
+<section id="hero" class="mt-28 md:mt-40 mb-12 relative" #heroContainer>
 
     <div class="flex justify-center">
 
         <form class="px-6 py-10 grid gap-y-3 w-[500px] mx-6 lg:max-w-xl rounded-lg shadow-md">
+            <div class="mb-3">
+                <span class="font-gray-500 font-medium">Get in touch ✌🏾</span>
+            </div>
             <div>
                 <input id="name" class="w-full" name="name" type="text" placeholder="Full Name">
             </div>
@@ -18,6 +21,10 @@
             </div>
         </form>
 
+    </div>
+
+    <div class="flex mt-8 md:mt-16 mb-0">
+        <ng-lottie class="mx-auto" width="250px" [options]="catLottie"></ng-lottie>
     </div>
 
 </section>
