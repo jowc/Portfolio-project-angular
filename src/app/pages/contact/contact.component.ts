@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { FormGroup } from '@angular/forms';
 import { AnimationOptions } from 'ngx-lottie';
 
 @Component({
@@ -11,9 +12,18 @@ export class ContactComponent implements OnInit {
     path: 'https://assets3.lottiefiles.com/packages/lf20_OZnTKS.json',
   };
 
+  // contactForm = new FormGroup()
+  fullname: string = ''
+  email: string = ''
+  senderMessage: string = ''
+
   constructor() { }
 
   ngOnInit(): void {
+  }
+
+  submit() {
+    console.log()
   }
 
 }

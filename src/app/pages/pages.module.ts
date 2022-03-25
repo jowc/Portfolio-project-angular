@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterModule } from '@angular/router';
+import { FormsModule } from '@angular/forms';
 
 import { NgParticlesModule } from "ng-particles";
 import { LottieModule } from 'ngx-lottie';
@@ -21,6 +22,7 @@ import { ContactComponent } from './contact/contact.component';
   imports: [
     CommonModule,
     RouterModule,
+    FormsModule,
     NgParticlesModule,
     LottieModule,
     SharedModule

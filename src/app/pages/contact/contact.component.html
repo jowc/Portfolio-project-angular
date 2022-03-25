@@ -2,22 +2,28 @@
 
     <div class="flex justify-center">
 
-        <form class="px-6 py-10 grid gap-y-3 w-[500px] mx-6 lg:max-w-xl rounded-lg shadow-md">
+        <form class="cForm" #cForm="ngForm" novalidate>
             <div class="mb-3">
                 <span class="font-gray-500 font-medium">Get in touch ✌🏾</span>
             </div>
             <div>
-                <input id="name" class="w-full" name="name" type="text" placeholder="Full Name">
+                <input id="name" class="w-full" name="name" type="text" placeholder="Full Name" required minlength="3"
+                    ngModel>
             </div>
             <div>
-                <input id="subject" class="w-full" name="subject" type="text" placeholder="Full Name">
+                <input id="subject" class="w-full" name="subject" type="email" placeholder="Primary Email" required
+                    minlength="6" pattern="[^ @]*@[^ @]*" ngModel>
             </div>
             <div>
-                <textarea name="message" id="message" class="w-full" cols="" rows="4"
-                    placeholder="Message here"></textarea>
+                <textarea name="senderMessage" id="message" class="w-full" cols="" rows="4" placeholder="Message here"
+                    required minlength="8" ngModel></textarea>
             </div>
             <div>
-                <button>Send Message</button>
+                <button [disabled]="cForm.invalid" ngClass="{bg-gray-500: cform.invalid}">Send Message</button>
+            </div>
+
+            <div>
+                <pre>{{cForm.value | json}}</pre>
             </div>
         </form>
 
