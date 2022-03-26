@@ -1,0 +1,22 @@
+<div class="carousel-container" #carouselContainer>
+
+    <div class="carousel" #carousel>
+
+        <ng-container *ngFor="let img of imgs; let i = index">
+            <figure class="carousel__item item--{{i+1}}">
+                <img src="{{img}}" alt="{{i+1}}">
+                <figcaption class="title">JoecDev</figcaption>
+            </figure>
+        </ng-container>
+
+    </div>
+
+    <button class="prev" (click)="prev()">
+        <img class="icon w-10" src="assets/left-arrow.svg">
+    </button>
+
+    <button class="next" (click)="next()">
+        <img class="icon w-10" src="assets/right-arrow.svg">
+    </button>
+
+</div>

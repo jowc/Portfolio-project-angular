@@ -54,3 +54,14 @@ export const projects: projectModel[] = [
         description: "Intrinsicly orchestrate 2.0 core competencies and quality technologies. Globally parallel task inexpensive growth strategies."
     }
 ]
+
+export const imageSlider: string[] = [
+    'assets/media/fardelins-dashboard.png',
+    'assets/media/pic1.png',
+    'assets/media/pic2.png',
+    'assets/media/pic3.png',
+    'assets/media/pic4.png',
+    'assets/media/pic5.png',
+    'assets/media/pic[1].jpg',
+    'assets/media/pic[2].jpg',
+]

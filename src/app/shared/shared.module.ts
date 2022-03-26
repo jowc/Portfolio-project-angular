@@ -5,6 +5,7 @@ import { RouterModule } from '@angular/router';
 import { FooterComponent } from './components/footer/footer.component';
 import { HeaderComponent } from './components/header/header.component';
 import { ProjectsCardComponent } from './components/projects-card/projects-card.component';
+import { ImageSiderComponent } from './components/image-sider/image-sider.component';
 
 
 
@@ -13,7 +14,8 @@ import { ProjectsCardComponent } from './components/projects-card/projects-card.
   declarations: [
     HeaderComponent,
     FooterComponent,
-    ProjectsCardComponent
+    ProjectsCardComponent,
+    ImageSiderComponent
   ],
   imports: [
     CommonModule,
@@ -22,7 +24,8 @@ import { ProjectsCardComponent } from './components/projects-card/projects-card.
   exports: [
     HeaderComponent,
     FooterComponent,
-    ProjectsCardComponent
+    ProjectsCardComponent,
+    ImageSiderComponent
   ]
 })
 export class SharedModule { }
