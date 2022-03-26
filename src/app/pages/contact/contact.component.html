@@ -2,7 +2,7 @@
 
     <div class="flex justify-center">
 
-        <form class="cForm" #cForm="ngForm" novalidate>
+        <form class="cForm overflow-hidden" #cForm="ngForm" novalidate>
             <div class="mb-3">
                 <span class="font-gray-500 font-medium">Get in touch ✌🏾</span>
             </div>
@@ -15,16 +15,16 @@
                     minlength="6" pattern="[^ @]*@[^ @]*" ngModel>
             </div>
             <div>
-                <textarea name="senderMessage" id="message" class="w-full" cols="" rows="4" placeholder="Message here"
-                    required minlength="8" ngModel></textarea>
+                <textarea name="senderMessage" id="message" class="w-full" rows="4" placeholder="Message here" required
+                    minlength="8" ngModel></textarea>
             </div>
             <div>
                 <button [disabled]="cForm.invalid" ngClass="{bg-gray-500: cform.invalid}">Send Message</button>
             </div>
 
-            <div>
+            <!-- <div class="overflow-auto whitespace-pre-wrap">
                 <pre>{{cForm.value | json}}</pre>
-            </div>
+            </div> -->
         </form>
 
     </div>

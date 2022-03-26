@@ -1,5 +1,5 @@
 .card {
-  @apply rounded-lg shadow-md overflow-hidden;
+  @apply h-full rounded-lg shadow-md overflow-hidden;
 
   &-img {
     @apply w-full h-full object-cover object-center;

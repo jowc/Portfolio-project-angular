@@ -79,19 +79,21 @@
 <!-- Works Section -->
 <section id="" class="pt-16 pb-8 md:pt-24 bgColor flex justify-center" #Projects>
 
-    <section class="w-full contCards md:-mr-20">
+    <section class="w-full contCards xl:max-w-[1050px] md:-mr-20">
 
         <div>
             <h3>Works🗂️</h3>
             <h6>Featured projects</h6>
         </div>
 
-        <div class="mt-8 grid md:grid-cols-2 lg:grid-cols-3 gap-4">
-            <app-projects-card></app-projects-card>
+        <div class="mt-8 grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+            <ng-container *ngFor="let data of projects">
+                <app-projects-card [cdata]="data"></app-projects-card>
+            </ng-container>
         </div>
 
-        <div class="mt-8">
-            <button>Load More</button>
+        <div class="mt-8" *ngIf="!projectEnd">
+            <button (click)="getProject()">Load More</button>
         </div>
 
     </section>

@@ -9,11 +9,41 @@ export const projects: projectModel[] = [
         link: 'github.com/jowc',
         img: 'assets/media/fardelins-dashboard.png',
         stacks: ['Nodejs', 'Angular', 'Tailwind CSS'],
+        description: "Intrinsicly orchestrate 2.0 core. Globally parallel task inexpensive growth strategies."
+    },
+    {
+        link: 'github.com/jowc',
+        img: 'assets/media/pic1.png',
+        stacks: ['Django', 'Angular', 'Tailwind CSS'],
         description: "Intrinsicly orchestrate 2.0 core competencies and quality technologies. Globally parallel task inexpensive growth strategies."
     },
     {
         link: 'github.com/jowc',
-        img: 'assets/media/fardelins-dashboard.png',
+        img: 'assets/media/pic2.png',
+        stacks: ['VueJs', 'Firebase', 'Tailwind CSS'],
+        description: "Intrinsicly orchestrate 2.0 core competencies and quality technologies. Globally parallel task inexpensive growth strategies."
+    },
+    {
+        link: 'github.com/jowc',
+        img: 'assets/media/pic4.png',
+        stacks: ['Nodejs', 'Angular', 'Tailwind CSS'],
+        description: "Intrinsicly orchestrate 2.0 core competencies and quality technologies. Globally parallel task inexpensive growth strategies."
+    },
+    {
+        link: 'github.com/jowc',
+        img: 'assets/media/pic5.png',
+        stacks: ['Nodejs', 'Angular', 'Tailwind CSS'],
+        description: "Intrinsicly orchestrate 2.0 core competencies and quality technologies. Globally parallel task inexpensive growth strategies."
+    },
+    {
+        link: 'github.com/jowc',
+        img: 'assets/media/pic[1].jpg',
+        stacks: ['Nodejs', 'Angular', 'Tailwind CSS'],
+        description: "Intrinsicly orchestrate 2.0 core competencies and quality technologies. Globally parallel task inexpensive growth strategies."
+    },
+    {
+        link: 'github.com/jowc',
+        img: 'assets/media/pic[2].jpg',
         stacks: ['Nodejs', 'Angular', 'Tailwind CSS'],
         description: "Intrinsicly orchestrate 2.0 core competencies and quality technologies. Globally parallel task inexpensive growth strategies."
     },
@@ -22,23 +52,5 @@ export const projects: projectModel[] = [
         img: 'assets/media/fardelins-dashboard.png',
         stacks: ['Nodejs', 'Angular', 'Tailwind CSS'],
         description: "Intrinsicly orchestrate 2.0 core competencies and quality technologies. Globally parallel task inexpensive growth strategies."
-    },
-    {
-        link: 'github.com/jowc',
-        img: 'assets/media/fardelins-dashboard.png',
-        stacks: ['Nodejs', 'Angular', 'Tailwind CSS'],
-        description: "Intrinsicly orchestrate 2.0 core competencies and quality technologies. Globally parallel task inexpensive growth strategies."
-    },
-    {
-        link: 'github.com/jowc',
-        img: 'assets/media/fardelins-dashboard.png',
-        stacks: ['Nodejs', 'Angular', 'Tailwind CSS'],
-        description: "Intrinsicly orchestrate 2.0 core competencies and quality technologies. Globally parallel task inexpensive growth strategies."
-    },
-    {
-        link: 'github.com/jowc',
-        img: 'assets/media/fardelins-dashboard.png',
-        stacks: ['Nodejs', 'Angular', 'Tailwind CSS'],
-        description: "Intrinsicly orchestrate 2.0 core competencies and quality technologies. Globally parallel task inexpensive growth strategies."
-    },
+    }
 ]

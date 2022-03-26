@@ -7,7 +7,7 @@ import { projectModel } from 'src/app/store/models';
   styleUrls: ['./projects-card.component.scss']
 })
 export class ProjectsCardComponent implements OnInit {
-  @Input() data: (projectModel | null) = null;
+  @Input() cdata: (projectModel | null) = null;
 
   constructor() { }
 

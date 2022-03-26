@@ -1,7 +1,7 @@
 import { AfterViewInit, Component, ElementRef, OnDestroy, OnInit, ViewChild } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { AnimationOptions } from 'ngx-lottie';
-import { Observable, of, Subscription } from 'rxjs';
+import { BehaviorSubject, map, Observable, of, Subscription, tap } from 'rxjs';
 import { projects } from 'src/app/store/api';
 import { projectModel } from 'src/app/store/models';
 import { Container, Main } from 'tsparticles';
@@ -16,7 +16,10 @@ export class HomeComponent implements AfterViewInit, OnInit, OnDestroy {
   id = "z";
   @ViewChild('heroContainer')
   div!: ElementRef<HTMLElement>;
-  // projects!: Observable<projectModel[]>;
+  projects!: projectModel[];
+  projectData!: projectModel[];
+  projectEnd: boolean = false
+
 
   /* or the classic JavaScript object */
   particlesOptions: any = particleOptionsJSON
@@ -39,7 +42,6 @@ export class HomeComponent implements AfterViewInit, OnInit, OnDestroy {
   ngOnInit(): void {
     this.route.fragment.subscribe((e: any) => {
       if (e) {
-        console.log(e)
         this.scroll(e)
       }
     })
@@ -59,12 +61,12 @@ export class HomeComponent implements AfterViewInit, OnInit, OnDestroy {
 
 
   particlesLoaded(container: Container): void {
-    console.log(container.canvas.size);
+    // console.log(container.canvas.size);
   }
 
   particlesInit(main: Main): any {
     // main.set('z', this.div)
-    console.log(main);
+    // console.log(main);
     return
   }
 
@@ -73,7 +75,20 @@ export class HomeComponent implements AfterViewInit, OnInit, OnDestroy {
   }
 
   getProjects() {
-    return of(projects).subscribe(data => console.log(data))
+    return of(projects).subscribe(data => {
+      this.projects = data.slice(0, 3)
+      this.projectData = data
+    }).unsubscribe()
+  }
+
+  getProject() {
+    let projectCount = +this.projects.length
+    this.projects = this.projectData.slice(0, projectCount + 3)
+    console.log("worked")
+
+    if (this.projects.length == this.projectData.length) {
+      this.projectEnd = true
+    }
   }
 
 }
