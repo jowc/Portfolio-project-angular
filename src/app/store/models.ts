@@ -4,3 +4,7 @@ export interface projectModel {
     stacks: string[],
     description: string,
 }
+
+export interface galleryModel {
+    url: string
+}

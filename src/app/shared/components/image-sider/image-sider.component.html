@@ -2,9 +2,9 @@
 
     <div class="carousel" #carousel>
 
-        <ng-container *ngFor="let img of imgs; let i = index">
-            <figure class="carousel__item item--{{i+1}}">
-                <img src="{{img}}" alt="{{i+1}}">
+        <ng-container>
+            <figure class="carousel__item item--{{i+1}}" *ngFor="let img of imgs; let i = index">
+                <img src="{{img.url}}" alt="{{i+1}}">
                 <figcaption class="title">JoecDev</figcaption>
             </figure>
         </ng-container>

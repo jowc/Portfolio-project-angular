@@ -1,14 +1,12 @@
 .carousel-container {
-  @apply max-w-7xl h-[500px] my-[10%] mx-auto overflow-y-hidden relative;
+  @apply max-w-7xl h-[500px] my-[10%] mx-auto overflow-hidden relative;
 }
 
 .carousel {
   @apply relative z-[1];
-  width: inherit;
-  height: inherit;
 
   &__item {
-    @apply absolute shadow-sm rounded-3xl overflow-hidden w-[650px] h-[400px];
+    @apply absolute shadow-sm rounded-3xl overflow-hidden w-[500px] h-[320px];
     transition: transform 1s cubic-bezier(0.16, 1, 0.3, 1);
 
     .title {
