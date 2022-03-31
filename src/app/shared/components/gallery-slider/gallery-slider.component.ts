@@ -11,19 +11,9 @@ import { galleryModel } from 'src/app/store/models';
   styleUrls: ['./gallery-slider.component.scss']
 })
 export class GallerySliderComponent implements OnInit {
-  public images$?: Observable<GalleryItem[]>
 
   constructor() { }
 
-  ngOnInit(): any {
-
-    this.images$ = of(imageSlider).pipe(
-      map(res => {
-        new ImageItem({ src: res.url, thumb: res.url })
-        console.log(res)
-
-      })
-    ).subscribe()
-  }
+  ngOnInit(): any { }
 
 }
