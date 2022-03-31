@@ -2,10 +2,7 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterModule } from '@angular/router';
 
-import { GalleryModule } from 'ng-gallery';
-import { GALLERY_CONFIG } from 'ng-gallery';
-import { LightboxModule } from 'ng-gallery/lightbox';
-import { LIGHTBOX_CONFIG } from 'ng-gallery/lightbox';
+import { SwiperModule } from 'swiper/angular';
 
 import { FooterComponent } from './components/footer/footer.component';
 import { HeaderComponent } from './components/header/header.component';
@@ -27,8 +24,7 @@ import { GallerySliderComponent } from './components/gallery-slider/gallery-slid
   imports: [
     CommonModule,
     RouterModule,
-    GalleryModule,
-    LightboxModule,
+    SwiperModule,
   ],
   exports: [
     HeaderComponent,
@@ -37,21 +33,6 @@ import { GallerySliderComponent } from './components/gallery-slider/gallery-slid
     ImageSiderComponent,
     GallerySliderComponent
   ],
-  providers: [
-    {
-      provide: GALLERY_CONFIG,
-      useValue: {
-        dots: true,
-        imageSize: 'cover'
-      }
-    },
-    {
-      provide: LIGHTBOX_CONFIG,
-      useValue: {
-        keyboardShortcuts: false
-      }
-    }
-
-  ]
+  providers: []
 })
 export class SharedModule { }

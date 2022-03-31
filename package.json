@@ -11,7 +11,6 @@
   "private": true,
   "dependencies": {
     "@angular/animations": "~13.2.0",
-    "@angular/cdk": "^13.3.2",
     "@angular/common": "~13.2.0",
     "@angular/compiler": "~13.2.0",
     "@angular/core": "~13.2.0",
@@ -22,10 +21,11 @@
     "angular-particle": "^1.0.4",
     "gsap": "^3.9.1",
     "lottie-web": "^5.9.1",
-    "ng-gallery": "^6.0.1",
     "ng-particles": "^2.42.3",
     "ngx-lottie": "^8.0.1",
+    "ngx-useful-swiper": "^10.0.1",
     "rxjs": "~7.5.0",
+    "swiper": "^6.8.4",
     "tslib": "^2.3.0",
     "zone.js": "~0.11.4"
   },

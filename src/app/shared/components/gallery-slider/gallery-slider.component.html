@@ -1,1 +1,27 @@
-image slider works
+<div class="">
+    <swiper [config]="config" #swiper>
+
+        <ng-container *ngFor="let slide of (slides); let i = index">
+            <ng-template swiperSlide>
+                <img src="{{slide.url}}" alt=""
+                    class="object-cover max-w-[300px] sm:max-w-[400px] h-56 rounded-lg shadow-md mx-3">
+            </ng-template>
+        </ng-container>
+
+    </swiper>
+</div>
+
+<!-- <div class="hidden sm:block">
+    <swiper [config]="config" (swiper)="onSwiper($event)" (slideChange)="onSlideChange()" #swiper>
+
+        <ng-container *ngFor="let slide of (slides); let i = index">
+            <ng-template swiperSlide>
+                <img src="{{slide.url}}" alt="" class="object-cover object-center w-[400px] h-56 rounded-lg shadow-md">
+            </ng-template>
+        </ng-container>
+
+        <button (click)="slideNext()">Next slide</button>
+        <button (click)="slidePrev()">Prev slide</button>
+
+    </swiper>
+</div> -->
