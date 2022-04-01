@@ -8,10 +8,18 @@ import { projectModel } from 'src/app/store/models';
 })
 export class ProjectsCardComponent implements OnInit {
   @Input() cdata: (projectModel | null) = null;
+  loadDescription: boolean = false
 
   constructor() { }
 
   ngOnInit(): void {
+
+  }
+
+  checkDes(): void {
+    if (this.cdata!.description.length > 50) {
+      this.loadDescription = true
+    }
   }
 
 }
