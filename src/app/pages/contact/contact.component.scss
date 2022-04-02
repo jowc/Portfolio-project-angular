@@ -5,3 +5,7 @@
 input {
   @apply max-w-full;
 }
+
+.sentMessage{
+  @apply px-6 py-10 grid gap-y-3 mx-6 lg:max-w-4xl rounded-lg shadow-md;
+}

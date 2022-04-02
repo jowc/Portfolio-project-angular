@@ -1,8 +1,10 @@
 <section id="hero" class="mt-28 md:mt-40 mb-12 relative" #heroContainer>
 
-    <div class="flex justify-center">
+    <div class="flex flex-col items-center justify-center">
 
-        <form class="cForm overflow-hidden" #cForm="ngForm">
+        <div class="sentMessage" *ngIf="sentForm">Hi {{fullname}}, your message has been sent successfully😊</div>
+
+        <form class="cForm overflow-hidden" #cForm="ngForm" *ngIf="!sentForm">
             <div class="mb-3">
                 <span class="font-gray-500 font-medium">Get in touch ✌🏾</span>
             </div>
@@ -11,24 +13,30 @@
                     [(ngModel)]="fullname">
             </div>
             <div>
-                <input id="subject" class="w-full" name="subject" type="email" placeholder="Primary Email" required
+                <input id="email" class="w-full" name="email" type="email" placeholder="Primary Email" required
                     minlength="6" pattern="[^ @]*@[^ @]*" [(ngModel)]="email">
             </div>
             <div>
                 <textarea name="senderMessage" id="message" class="w-full" rows="4" placeholder="Message here" required
                     [(ngModel)]="senderMessage"></textarea>
-                <!-- <span *ngIf="">
-                        Should be more than 6 letter long.
-                    </span> -->
             </div>
             <div>
-                <button [disabled]="cForm.invalid" (click)="submit(cForm.value)">Send
-                    Message</button>
+                <ng-container *ngIf="!sending; else Loading">
+                    <button (click)="submit(cForm)">Send
+                        Message</button>
+                </ng-container>
+                <ng-template #Loading>
+                    <button>Send...</button>
+                </ng-template>
             </div>
 
             <!-- <div class="overflow-auto whitespace-pre-wrap">
                 <pre>{{cForm.value | json}}</pre>
             </div> -->
+
+            <span *ngIf="cForm.invalid && cForm.submitted" class="text-red-600">
+                All fields should be filled correctly.
+            </span>
         </form>
 
     </div>

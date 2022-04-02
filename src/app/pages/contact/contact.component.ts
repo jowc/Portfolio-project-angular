@@ -20,29 +20,44 @@ export class ContactComponent implements OnInit {
   email: string = ''
   senderMessage: string = ''
 
+  formMessage: string = ''
+  sending: boolean = false
+  sentForm: boolean = false
+
   constructor() { }
 
   ngOnInit(): void {
   }
 
-  submit(cForm: any) {
-    console.log(cForm)
-    //       Body : `
-    //       <i>This is sent as a feedback from my resume page.</i> <br/>
-    //        <b>Name: </b>${this.fullname} <br /> <b>Email: </b>${this.email}<br /> <b>Subject: </b> JoecDev Inquiry<br /> <b>Message:</b> <br /> ${this.senderMessage} <br><br> <b>~End of Message.~</b> `
-    //
+  submit(cForm: NgForm) {
+    console.log(cForm.value)
 
-    Email.send({
-      Host: "smtp.elasticemail.com",
-      Username: "joecdev@gmail.com",
-      Password: "706C7348F707C8EB74A7BC695BDDC5BFEE69",
-      To: 'joecdev@gmail.com',
-      From: this.email,
-      Subject: `Message from ${this.fullname}`,
-      Body: this.senderMessage
-    }).then(
-      (message: any) => console.log(message)
-    ).catch((err: any) => console.log(err))
+    if (cForm.valid) {
+
+      Email.send({
+        Host: "smtp.elasticemail.com",
+        Username: "joecdev@gmail.com",
+        Password: "706C7348F707C8EB74A7BC695BDDC5BFEE69",
+        To: 'joecdev@gmail.com',
+        From: 'joecdev@gmail.com',
+        Subject: `Message from ${this.fullname}`,
+        Body: `
+              <i>This is sent as a message from my portfolio site.</i> <br/>
+              <b>Name: </b>${cForm.value.name} <br /> <b>Email: </b>${cForm.value.email}<br /> <b>Subject: </b> JoecDev Inquiry<br /> <b>Message:</b> <br /> ${cForm.value.senderMessage}`
+      }).then(
+        (message: any) => {
+          console.log(message)
+          this.sentForm = true
+
+        })
+        .catch((err: any) => {
+          console.log(err)
+          this.formMessage = err
+        })
+
+
+    }
+
   }
 
 }
