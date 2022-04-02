@@ -1,5 +1,5 @@
 <!-- Hero Section -->
-<section id="hero" class="mt-16 md:mt-20 relative" #heroContainer>
+<section id="heroContainer" class="mt-16 md:mt-20 relative" #heroContainer>
     <ng-particles id="heroCont" [options]="particlesOptions" (particlesLoaded)="particlesLoaded($event)">
     </ng-particles>
 
@@ -59,7 +59,8 @@
 </section>
 
 <!-- Photography Section -->
-<section class="mt-8 md:mt-24 flex justify-center">
+
+<!-- <section class="mt-8 md:mt-24 flex justify-center">
 
     <section class="w-full contCards px-7 sm:px-0">
 
@@ -69,17 +70,16 @@
         </div>
 
         <div class="mt-8">
-            <!-- <app-image-slider></app-image-slider> -->
             <app-gallery-slider></app-gallery-slider>
 
         </div>
     </section>
 
 
-</section>
+</section> -->
 
 <!-- Works Section -->
-<section id="" class="pt-16 pb-8 md:pt-24 bgColor flex justify-center" #Projects>
+<section id="Projects" class="pt-16 pb-8 md:pt-24 bgColor flex justify-center" #Projects>
 
     <section class="w-full contCards xl:max-w-[1050px] md:-mr-20">
 

@@ -4,6 +4,8 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { LottieModule } from 'ngx-lottie';
 import player from 'lottie-web';
+import { CloudinaryModule } from '@cloudinary/ng';
+
 
 import { AppComponent } from './app.component';
 
@@ -28,6 +30,7 @@ export function playerFactory() {
     BrowserModule,
     AppRoutingModule,
     LottieModule.forRoot({ player: playerFactory }),
+    CloudinaryModule,
     SharedModule,
     BlogModule,
     AdminModule,

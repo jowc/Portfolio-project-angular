@@ -3,15 +3,15 @@ import { map, Observable, of, switchMap, tap } from 'rxjs';
 import { imageSlider } from 'src/app/store/api';
 import { galleryModel } from 'src/app/store/models';
 
-import SwiperCore, { SwiperOptions, Swiper, Virtual, EffectFade } from 'swiper';
+import { Cloudinary, CloudinaryImage } from '@cloudinary/url-gen';
+// import { PhotoSwipeLightbox } from 'photoswipe/lightbox';
+
+import SwiperCore, { SwiperOptions, Swiper, Virtual, EffectFade, Zoom, Navigation } from 'swiper';
 import { SwiperComponent } from 'swiper/angular';
 
 
 // install Swiper modules
-SwiperCore.use([Virtual]);
-
-// install Swiper modules
-SwiperCore.use([EffectFade]);
+SwiperCore.use([Virtual, EffectFade, Zoom, Navigation]);
 
 @Component({
   selector: 'app-gallery-slider',

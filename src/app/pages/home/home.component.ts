@@ -16,6 +16,11 @@ export class HomeComponent implements AfterViewInit, OnInit, OnDestroy {
   id = "z";
   @ViewChild('heroContainer')
   div!: ElementRef<HTMLElement>;
+
+  @ViewChild('heroContainer') heroEl!: ElementRef<HTMLDivElement>
+  @ViewChild('Project') projectEl!: ElementRef<HTMLDivElement>
+
+
   projects!: projectModel[];
   projectData!: projectModel[];
   projectEnd: boolean = false
@@ -55,7 +60,7 @@ export class HomeComponent implements AfterViewInit, OnInit, OnDestroy {
 
   ngAfterViewInit(): void {
     // this.div.nativeElement.style.height = '400px'
-    console.log(this.div)
+    // console.log(this.div)
 
   }
 
@@ -84,7 +89,7 @@ export class HomeComponent implements AfterViewInit, OnInit, OnDestroy {
   getProject() {
     let projectCount = +this.projects.length
     this.projects = this.projectData.slice(0, projectCount + 3)
-    console.log("worked")
+    // console.log("worked")
 
     if (this.projects.length == this.projectData.length) {
       this.projectEnd = true
