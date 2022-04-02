@@ -1,8 +1,11 @@
 <section id="hero" class="mt-28 md:mt-40 mb-12 relative" #heroContainer>
 
-    <div class="flex flex-col items-center justify-center">
+    <div class="flex justify-center" *ngIf="sentForm">
+        <div class="sentMessage">Hi {{fullname}}, your message has been sent
+            successfully😊</div>
+    </div>
 
-        <div class="sentMessage" *ngIf="sentForm">Hi {{fullname}}, your message has been sent successfully😊</div>
+    <div class="flex justify-center">
 
         <form class="cForm overflow-hidden" #cForm="ngForm" *ngIf="!sentForm">
             <div class="mb-3">
@@ -21,13 +24,11 @@
                     [(ngModel)]="senderMessage"></textarea>
             </div>
             <div>
-                <ng-container *ngIf="!sending; else Loading">
-                    <button (click)="submit(cForm)">Send
-                        Message</button>
-                </ng-container>
-                <ng-template #Loading>
-                    <button>Send...</button>
-                </ng-template>
+                <button *ngIf="!sendingM" (click)="submit(cForm)">Send
+                    Message</button>
+
+                <button *ngIf="sendingM">Sending...</button>
+
             </div>
 
             <!-- <div class="overflow-auto whitespace-pre-wrap">

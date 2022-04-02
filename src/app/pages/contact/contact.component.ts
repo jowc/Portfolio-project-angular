@@ -21,7 +21,7 @@ export class ContactComponent implements OnInit {
   senderMessage: string = ''
 
   formMessage: string = ''
-  sending: boolean = false
+  sendingM: boolean = false
   sentForm: boolean = false
 
   constructor() { }
@@ -31,6 +31,7 @@ export class ContactComponent implements OnInit {
 
   submit(cForm: NgForm) {
     console.log(cForm.value)
+    this.sendingM = true
 
     if (cForm.valid) {
 
@@ -48,10 +49,12 @@ export class ContactComponent implements OnInit {
         (message: any) => {
           console.log(message)
           this.sentForm = true
+          this.sendingM = false
 
         })
         .catch((err: any) => {
           console.log(err)
+          this.sendingM = false
           this.formMessage = err
         })
 

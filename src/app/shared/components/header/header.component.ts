@@ -33,7 +33,6 @@ export class HeaderComponent implements OnInit, AfterViewInit {
   }
 
   ngAfterViewInit(): void {
-    this.handleScroll()
   }
 
   toggleMenu() {
@@ -44,8 +43,9 @@ export class HeaderComponent implements OnInit, AfterViewInit {
   autoToggle() {
     this.router.events.subscribe((val) => {
       if (val instanceof NavigationEnd) {
-        let fragment = val.url.replace('/#', '')
+        // let fragment = val.url.replace('/#', '')
         this.isOpen = false
+        this.handleScroll()
       }
     });
   }
