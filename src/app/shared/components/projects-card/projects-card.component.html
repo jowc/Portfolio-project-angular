@@ -14,7 +14,7 @@
             <div>
                 <p class="h-12 overflow-x-hidden sm:h-16" *ngIf="!loadDescription">{{cdata?.description?.slice(50)}}...
                 </p>
-                <p *ngIf="loadDescription">{{cdata?.description}}</p>
+                <p @slide *ngIf="loadDescription">{{cdata?.description}}</p>
             </div>
 
             <div class="text-right mt-2 mr-2 text-gray-500 font-bold self-end">

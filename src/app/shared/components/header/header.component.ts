@@ -1,14 +1,19 @@
 import { AfterViewInit, Component, ElementRef, OnInit, ViewChild } from '@angular/core';
 import { ActivatedRoute, NavigationEnd, Router } from '@angular/router';
+import { ViewportScroller } from '@angular/common';
+
+
 import { share } from 'rxjs';
 import { gsap } from 'gsap';
+
 import { HomeComponent } from 'src/app/pages/home/home.component';
-import { ViewportScroller } from '@angular/common';
+import { fade } from '../../animation';
 
 @Component({
   selector: 'app-header',
   templateUrl: './header.component.html',
-  styleUrls: ['./header.component.scss']
+  styleUrls: ['./header.component.scss'],
+  animations: [fade]
 })
 export class HeaderComponent implements OnInit, AfterViewInit {
   isOpen: boolean = false
