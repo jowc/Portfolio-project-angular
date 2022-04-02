@@ -6,52 +6,52 @@ export const sendgridKey: string = '12b9f281aadd8eb247184900afa1b93cea905ec6c0cf
 
 export const projects: projectModel[] = [
     {
-        link: 'https://github.com/jowc',
-        img: 'assets/media/fardelins-dashboard.png',
-        stacks: ['Nodejs', 'Angular', 'Tailwind CSS'],
-        description: "Intrinsicly orchestrate 2.0 core. Globally parallel task inexpensive growth strategies."
+        link: 'https://joecdev.com',
+        img: 'https://res.cloudinary.com/dt8umwrcb/image/upload/v1648926926/portfolio/joecdev_seegbk.jpg',
+        stacks: ['Strapi', 'Angular', 'Tailwind CSS'],
+        description: "My portfolio website. It's the site you're looking at currently. It's developed with Angular as the front-end and StrapiJs as the headless CMS backend."
     },
     {
-        link: 'https://github.com/jowc',
-        img: 'assets/media/pic1.png',
-        stacks: ['Django', 'Angular', 'Tailwind CSS'],
-        description: "Intrinsicly orchestrate 2.0 core competencies and quality technologies. Globally parallel task inexpensive growth strategies."
+        link: 'https://fardelins.com',
+        img: 'https://res.cloudinary.com/dt8umwrcb/image/upload/v1648926926/portfolio/fardelins_rulesd.jpg',
+        stacks: ['NodeJs', 'Angular', 'Tailwind CSS'],
+        description: "This is a side project I'm working on. It's a SaaS Courier Management System developed from scratch with Angular, Angular material, and NodeJS. Its features include delivery management, dispatch tracking, and lots more."
     },
     {
-        link: 'https://github.com/jowc',
-        img: 'assets/media/pic2.png',
-        stacks: ['VueJs', 'Firebase', 'Tailwind CSS'],
-        description: "Intrinsicly orchestrate 2.0 core competencies and quality technologies. Globally parallel task inexpensive growth strategies."
+        link: 'https://chuuse.org',
+        img: 'https://res.cloudinary.com/dt8umwrcb/image/upload/v1648926925/portfolio/chuuse_udvoq0.jpg',
+        stacks: ['Nuxt', 'Tailwind CSS'],
+        description: "A project I revamped using NuxtJs. I also worked here. Chuuse is a talent provider, and an EdTech company focused on improving young African tech talents for the global workspace."
     },
     {
-        link: 'https://github.com/jowc',
-        img: 'assets/media/pic4.png',
-        stacks: ['Nodejs', 'Angular', 'Tailwind CSS'],
-        description: "Intrinsicly orchestrate 2.0 core competencies and quality technologies. Globally parallel task inexpensive growth strategies."
+        link: 'https://lessonapp.chuuse.org',
+        img: 'https://res.cloudinary.com/dt8umwrcb/image/upload/v1648926926/portfolio/lessonteacher_hqq9r1.jpg',
+        stacks: ['Angular', 'Tailwind CSS'],
+        description: "A simple landing page I designed for Chuuse Lesson teacher App. It accepts PayStack credit card payments."
     },
     {
-        link: 'https://github.com/jowc',
-        img: 'assets/media/pic5.png',
-        stacks: ['Nodejs', 'Angular', 'Tailwind CSS'],
-        description: "Intrinsicly orchestrate 2.0 core competencies and quality technologies. Globally parallel task inexpensive growth strategies."
+        link: 'https://learn.chuuse.org',
+        img: 'https://res.cloudinary.com/dt8umwrcb/image/upload/v1633522872/portfolio/Chuuse-LMS.gif',
+        stacks: ['WordPress', 'Elementor', 'Tutor LMS'],
+        description: "Chuuse Learning Management System built on WordPress with Elementor and Tutor LMS plugin. It's a site used to train students online on basic tech skills."
     },
     {
-        link: 'https://github.com/jowc',
-        img: 'assets/media/pic[1].jpg',
-        stacks: ['Nodejs', 'Angular', 'Tailwind CSS'],
-        description: "Intrinsicly orchestrate 2.0 core competencies and quality technologies. Globally parallel task inexpensive growth strategies."
+        link: 'https://github.com/jowc/demo_dasboard',
+        img: 'https://res.cloudinary.com/dt8umwrcb/image/upload/v1648926916/portfolio/Demo_Material_Design_lekpgv.gif',
+        stacks: ['Angular', 'Material', 'High Chart'],
+        description: "This is a demo dashboard project built using Angular material and High Chart library. Dynamic data is been fetched and displayed on the dashboard."
     },
     {
-        link: 'https://github.com/jowc',
-        img: 'assets/media/pic[2].jpg',
-        stacks: ['Nodejs', 'Angular', 'Tailwind CSS'],
-        description: "Intrinsicly orchestrate 2.0 core competencies and quality technologies. Globally parallel task inexpensive growth strategies."
+        link: 'https://tranquil-waters-46809.herokuapp.com/',
+        img: 'https://res.cloudinary.com/dt8umwrcb/image/upload/v1633522869/portfolio/CareerPath.gif',
+        stacks: ['Django', 'Tailwind CSS', 'API'],
+        description: "A simple AI to test a user/student on what major to pursue as a career. It was a side project built because I had this challenge while growing up."
     },
     {
-        link: 'https://github.com/jowc',
-        img: 'assets/media/fardelins-dashboard.png',
-        stacks: ['Nodejs', 'Angular', 'Tailwind CSS'],
-        description: "Intrinsicly orchestrate 2.0 core competencies and quality technologies. Globally parallel task inexpensive growth strategies."
+        link: 'https://toh-angular-c9691.web.app/',
+        img: 'https://res.cloudinary.com/dt8umwrcb/image/upload/v1633522789/portfolio/TOH.gif',
+        stacks: ['Firebase', 'Angular', 'Tailwind CSS'],
+        description: "It was a revamp of the official Angular tutorial guide on learning Angular. I built this as a refresher project and enjoyed the comeback."
     }
 ]
 

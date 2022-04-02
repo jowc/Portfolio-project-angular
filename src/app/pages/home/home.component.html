@@ -15,7 +15,8 @@
                     <h1>Joseph Ojiofor <br> Chikeme</h1>
                     <h4 class="mt-3">Web Developer</h4>
                     <p class="mt-6 mx-4 md:ml-0 md:mr-32">
-                        I'm a full-stack developer based in Abuja, Nigeria. I'm interested in clean designs, web3, and
+                        I'm a full-stack developer and WordPress Elementor expert based in Abuja, Nigeria. I'm
+                        interested in clean designs, web3, and
                         user/dev experience. I love pets🐱 too.
                     </p>
                     <button class="mt-9 md:mt-12 " routerLink="/contact">Let's Chat</button>
@@ -46,9 +47,9 @@
                     </div>
                     <h3 class="mt-4 md:mt-8">Skills</h3>
                     <p class="mt-3"> I've worked with <span class="font-medium">Angular, VueJs, Django, React, Firebase,
-                            Strapi, PHP
+                            Strapi, PHP, Elementor,
                             Bootstrap and
-                            Tailwind CSS.</span> <br>I prefer working with Angular and Django.
+                            Tailwind CSS.</span> <br>I prefer working with Angular, Elementor and Django.
                         <br>
                         I'm enthusiastic about blockchain🧊 technology and already diving into it.
                     </p>
@@ -102,6 +103,11 @@
 
         <div class="mt-8" *ngIf="!projectEnd">
             <button (click)="getProject()">Load More</button>
+        </div>
+
+        <div class="mt-8" *ngIf="projectEnd">
+            <a class="text-primary-500 font-medium underline underline-offset-4" href="https://github.com/jowc">View
+                More on Github</a>
         </div>
 
     </section>
