@@ -8,3 +8,11 @@ export interface projectModel {
 export interface galleryModel {
     url: string
 }
+
+export class cForm {
+    constructor(
+        private fullName: string,
+        private email: string,
+        private message: string
+    ) { }
+}
