@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { StoreModule } from '@ngrx/store';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 
@@ -7,6 +8,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { LottieModule } from 'ngx-lottie';
 import player from 'lottie-web';
 import { CloudinaryModule } from '@cloudinary/ng';
+import { AppState } from './store/app.state';
 
 
 import { AppComponent } from './app.component';
@@ -15,8 +17,6 @@ import { SharedModule } from './shared/shared.module';
 import { BlogModule } from './blog/blog.module';
 import { AdminModule } from './admin/admin.module';
 import { PagesModule } from './pages/pages.module';
-
-
 
 
 export function playerFactory() {
@@ -30,6 +30,7 @@ export function playerFactory() {
   ],
   imports: [
     BrowserModule,
+    StoreModule.forRoot(AppState),
     BrowserAnimationsModule,
     AppRoutingModule,
     LottieModule.forRoot({ player: playerFactory }),

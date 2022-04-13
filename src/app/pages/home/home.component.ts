@@ -1,5 +1,6 @@
 import { AfterViewInit, Component, ElementRef, OnDestroy, OnInit, ViewChild } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
+import { Store } from '@ngrx/store';
 import { AnimationOptions } from 'ngx-lottie';
 import { BehaviorSubject, map, Observable, of, Subscription, tap } from 'rxjs';
 import { projects } from 'src/app/store/api';
@@ -42,7 +43,7 @@ export class HomeComponent implements AfterViewInit, OnInit, OnDestroy {
   };
 
 
-  constructor(private route: ActivatedRoute) { }
+  constructor(private route: ActivatedRoute, private store: Store) { }
 
   ngOnInit(): void {
     this.route.fragment.subscribe((e: any) => {
@@ -80,6 +81,7 @@ export class HomeComponent implements AfterViewInit, OnInit, OnDestroy {
   }
 
   getProjects() {
+    // this.projects = this.store.select("blog")
     return of(projects).subscribe(data => {
       this.projects = data.slice(0, 3)
       this.projectData = data
