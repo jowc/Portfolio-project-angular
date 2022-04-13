@@ -4,8 +4,6 @@ export interface count {
     score: number
 }
 
-
-
 export const AppState = {
     count: pagesReducer,
     blog: blogsReducer
