@@ -21,6 +21,7 @@
     "@cloudinary/ng": "^1.2.2",
     "@cloudinary/url-gen": "^1.7.0",
     "@ngrx/store": "^13.1.0",
+    "@ngrx/store-devtools": "^13.1.0",
     "angular-particle": "^1.0.4",
     "gsap": "^3.9.1",
     "lottie-web": "^5.9.1",
