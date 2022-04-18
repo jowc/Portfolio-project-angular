@@ -15,10 +15,10 @@ export let fade = trigger('fade', [
     })),
 
     transition('void => *', [
-        animate('0.5s ease-in')
+        animate('0.2s ease-in')
     ]),
     transition('* => void', [
-        animate('0.5s ease')
+        animate('0.1s ease')
     ]),
 
 ])

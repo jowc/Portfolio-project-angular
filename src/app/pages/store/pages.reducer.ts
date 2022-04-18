@@ -13,10 +13,16 @@ export const pagesReducer = createReducer(
 );
 
 
-export let blogState: projectModel[] = projects
+export let blogState: projectModel[] = []
 
 export const blogsReducer = createReducer(
     blogState,
+    on(blogActions.retrieveBlog, (state, blogState) => (
+        {
+            ...state,
+            ...blogState
+        }
+    )),
     on(blogActions.addBlog, (state, blogState) => (
         { ...state, blogState }
     )),
