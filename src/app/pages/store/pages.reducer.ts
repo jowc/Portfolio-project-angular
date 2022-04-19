@@ -5,15 +5,14 @@ import * as blogActions from './pages.action';
 
 export const initialState: (number | null) = 0;
 
+export let blogState: projectModel[] = []
+
 export const pagesReducer = createReducer(
     initialState,
     on(blogActions.add, (state) => state + 1),
     on(blogActions.edit, (state) => state - 1),
     on(blogActions.reset, (state) => 0)
 );
-
-
-export let blogState: projectModel[] = []
 
 export const blogsReducer = createReducer(
     blogState,

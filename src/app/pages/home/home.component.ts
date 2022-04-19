@@ -1,8 +1,11 @@
 import { AfterViewInit, Component, ElementRef, OnDestroy, OnInit, ViewChild } from '@angular/core';
+import { Title } from '@angular/platform-browser';
 import { ActivatedRoute } from '@angular/router';
 import { Store } from '@ngrx/store';
+
+
 import { AnimationOptions } from 'ngx-lottie';
-import { BehaviorSubject, map, Observable, of, Subscription, tap } from 'rxjs';
+import { of } from 'rxjs';
 import { projects } from 'src/app/store/api';
 import { projectModel } from 'src/app/store/models';
 import { Container, Main } from 'tsparticles';
@@ -43,9 +46,11 @@ export class HomeComponent implements AfterViewInit, OnInit, OnDestroy {
   };
 
 
-  constructor(private route: ActivatedRoute, private store: Store) { }
+  constructor(private route: ActivatedRoute, private store: Store, private title: Title) { }
 
   ngOnInit(): void {
+    this.title.setTitle("Joseph O. Chikeme")
+
     this.route.fragment.subscribe((e: any) => {
       if (e) {
         this.scroll(e)

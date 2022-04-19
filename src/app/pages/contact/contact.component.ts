@@ -1,3 +1,4 @@
+import { Title } from '@angular/platform-browser';
 import { Component, OnInit } from '@angular/core';
 import { FormGroup, NgForm } from '@angular/forms';
 import { AnimationOptions } from 'ngx-lottie';
@@ -24,9 +25,10 @@ export class ContactComponent implements OnInit {
   sendingM: boolean = false
   sentForm: boolean = false
 
-  constructor() { }
+  constructor(private title: Title) { }
 
   ngOnInit(): void {
+    this.title.setTitle("Contact Joseph Chikeme")
   }
 
   submit(cForm: NgForm) {
