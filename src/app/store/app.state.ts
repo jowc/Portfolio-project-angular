@@ -1,10 +1,16 @@
-import { blogsReducer, pagesReducer } from "../pages/store/pages.reducer";
+import { projectsReducer, pagesReducer } from "../pages/store/pages.reducer";
+import { projectModel } from "./models";
 
 export interface count {
     score: number
 }
 
-export const AppState = {
+export interface AppState {
+    count: count,
+    projects: projectModel
+}
+
+export const AppReducer = {
     count: pagesReducer,
-    blog: blogsReducer
+    projects: projectsReducer
 }

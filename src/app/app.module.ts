@@ -10,7 +10,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { LottieModule } from 'ngx-lottie';
 import player from 'lottie-web';
 import { CloudinaryModule } from '@cloudinary/ng';
-import { AppState } from './store/app.state';
+import * as fromRoot from './store/app.state';
 
 
 import { AppComponent } from './app.component';
@@ -32,7 +32,7 @@ export function playerFactory() {
   ],
   imports: [
     BrowserModule,
-    StoreModule.forRoot(AppState),
+    StoreModule.forRoot(fromRoot.AppReducer),
     BrowserAnimationsModule,
     AppRoutingModule,
     LottieModule.forRoot({ player: playerFactory }),

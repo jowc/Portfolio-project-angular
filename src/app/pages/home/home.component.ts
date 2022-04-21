@@ -5,8 +5,9 @@ import { Store } from '@ngrx/store';
 
 
 import { AnimationOptions } from 'ngx-lottie';
-import { of } from 'rxjs';
+import { Observable, of } from 'rxjs';
 import { projects } from 'src/app/store/api';
+import * as fromRoot from 'src/app/store/app.state';
 import { projectModel } from 'src/app/store/models';
 import { Container, Main } from 'tsparticles';
 import { particleOptionsJSON } from './particlesjs-config'
@@ -25,7 +26,8 @@ export class HomeComponent implements AfterViewInit, OnInit, OnDestroy {
   @ViewChild('Project') projectEl!: ElementRef<HTMLDivElement>
 
 
-  projects!: projectModel[];
+  // projects!: Observable<projectModel[]>;
+  projects!: projectModel[]
   projectData!: projectModel[];
   projectEnd: boolean = false
 
@@ -46,7 +48,11 @@ export class HomeComponent implements AfterViewInit, OnInit, OnDestroy {
   };
 
 
-  constructor(private route: ActivatedRoute, private store: Store, private title: Title) { }
+  constructor(
+    private route: ActivatedRoute,
+    private store: Store<fromRoot.AppState>,
+    private title: Title
+  ) { }
 
   ngOnInit(): void {
     this.title.setTitle("Joseph O. Chikeme")
@@ -58,6 +64,7 @@ export class HomeComponent implements AfterViewInit, OnInit, OnDestroy {
     })
 
     this.getProjects()
+    this.store.select("projects").subscribe(data => console.log(data))
   }
 
   ngOnDestroy(): void {
@@ -86,7 +93,7 @@ export class HomeComponent implements AfterViewInit, OnInit, OnDestroy {
   }
 
   getProjects() {
-    // this.projects = this.store.select("blog")
+    // this.projects = this.store.select("projects")
     return of(projects).subscribe(data => {
       this.projects = data.slice(0, 3)
       this.projectData = data

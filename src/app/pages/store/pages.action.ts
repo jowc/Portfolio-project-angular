@@ -7,7 +7,7 @@ export const reset = createAction('[pages Component] Reset');
 
 
 
-export const addBlog = createAction('[blog Component] add blog', props<projectModel>())
-export const editBlog = createAction('[blog Component] edit blog', props<projectModel>())
-export const deleteBlog = createAction('[blog Component] delete blog')
-export const retrieveBlog = createAction('[blog component retrieve blogs]')
+export const addProject = createAction('[Project Component] add Project', props<projectModel>())
+export const editProject = createAction('[Project Component] edit Project', props<projectModel>())
+export const deleteProject = createAction('[Project Component] delete Project')
+export const retrieveProject = createAction('[Project component retrieve Projects]')
