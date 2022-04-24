@@ -7,7 +7,7 @@ export interface count {
 
 export interface AppState {
     count: count,
-    projects: projectModel
+    projects: ReadonlyArray<projectModel>
 }
 
 export const AppReducer = {

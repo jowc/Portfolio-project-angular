@@ -12,7 +12,7 @@ const routes: Routes = [
   { path: 'contact', component: ContactComponent },
   { path: 'blog', loadChildren: () => import('./blog/blog.module').then(m => m.BlogModule) },
   { path: 'admin', loadChildren: () => import('./admin/admin.module').then(m => m.AdminModule) },
-  { path: '**', component: NotFoundComponent },
+  { path: '**', redirectTo: '/' },
 
 ];
 
