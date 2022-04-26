@@ -1,16 +1,11 @@
-import { projectsReducer, pagesReducer } from "../pages/store/pages.reducer";
+// import { ActionReducerMap } from "@ngrx/store";
+import { projectsReducer } from "../pages/store/pages.reducer";
 import { projectModel } from "./models";
 
-export interface count {
-    score: number
-}
-
 export interface AppState {
-    count: count,
-    projects: ReadonlyArray<projectModel>
+  projects: ReadonlyArray<projectModel[]>
 }
 
 export const AppReducer = {
-    count: pagesReducer,
-    projects: projectsReducer
+  "projects": projectsReducer
 }

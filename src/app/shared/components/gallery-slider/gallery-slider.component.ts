@@ -3,7 +3,6 @@ import { map, Observable, of, switchMap, tap } from 'rxjs';
 import { imageSlider } from 'src/app/store/api';
 import { galleryModel } from 'src/app/store/models';
 
-import { Cloudinary, CloudinaryImage } from '@cloudinary/url-gen';
 // import { PhotoSwipeLightbox } from 'photoswipe/lightbox';
 
 import SwiperCore, { SwiperOptions, Swiper, Virtual, EffectFade, Zoom, Navigation } from 'swiper';

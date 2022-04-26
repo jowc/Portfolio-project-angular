@@ -9,7 +9,6 @@ import { environment } from 'src/environments/environment';
 import { AppRoutingModule } from './app-routing.module';
 import { LottieModule } from 'ngx-lottie';
 import player from 'lottie-web';
-import { CloudinaryModule } from '@cloudinary/ng';
 import * as fromRoot from './store/app.state';
 
 
@@ -36,7 +35,6 @@ export function playerFactory() {
     BrowserAnimationsModule,
     AppRoutingModule,
     LottieModule.forRoot({ player: playerFactory }),
-    CloudinaryModule,
     SharedModule,
     BlogModule,
     AdminModule,

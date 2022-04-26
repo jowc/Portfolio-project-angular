@@ -1,16 +1,13 @@
 import { createSelector, createFeatureSelector } from '@ngrx/store';
-import { Book } from '../book-list/books.model';
+import { projectModel } from 'src/app/store/models';
 
-export const selectBooks = createFeatureSelector<ReadonlyArray<Book>>('books');
+export const selectProjects = createFeatureSelector<ReadonlyArray<projectModel>>('projects');
 
-export const selectCollectionState = createFeatureSelector<
-    ReadonlyArray<string>
->('collection');
+// export const selectCollectionState = createFeatureSelector<ReadonlyArray<string>>('collection');
 
-export const selectBookCollection = createSelector(
-    selectBooks,
-    selectCollectionState,
-    (books, collection) => {
-        return collection.map((id) => books.find((book) => book.id === id));
-    }
+export const selectProjectCollection = createSelector(
+  selectProjects,
+  (projects) => {
+    return projects.map((projects) => projects);
+  }
 );

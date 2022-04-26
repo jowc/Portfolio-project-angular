@@ -5,7 +5,7 @@ import { Store } from '@ngrx/store';
 
 
 import { AnimationOptions } from 'ngx-lottie';
-import { Observable, of } from 'rxjs';
+import { Observable, of, tap } from 'rxjs';
 import { projects } from 'src/app/store/api';
 import * as fromRoot from 'src/app/store/app.state';
 import { projectModel } from 'src/app/store/models';
