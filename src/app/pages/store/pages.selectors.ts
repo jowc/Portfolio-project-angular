@@ -7,7 +7,5 @@ export const selectProjects = createFeatureSelector<ReadonlyArray<projectModel>>
 
 export const selectProjectCollection = createSelector(
   selectProjects,
-  (projects) => {
-    return projects.map((projects) => projects);
-  }
+  (projects) => projects
 );

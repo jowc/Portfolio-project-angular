@@ -1,7 +1,7 @@
 import { AfterViewInit, Component, ElementRef, OnDestroy, OnInit, ViewChild } from '@angular/core';
 import { Title } from '@angular/platform-browser';
 import { ActivatedRoute } from '@angular/router';
-import { Store } from '@ngrx/store';
+import { select, Store } from '@ngrx/store';
 
 
 import { AnimationOptions } from 'ngx-lottie';
@@ -10,6 +10,7 @@ import { projects } from 'src/app/store/api';
 import * as fromRoot from 'src/app/store/app.state';
 import { projectModel } from 'src/app/store/models';
 import { Container, Main } from 'tsparticles';
+import { selectProjectCollection } from '../store/pages.selectors';
 import { particleOptionsJSON } from './particlesjs-config'
 
 @Component({
@@ -64,7 +65,9 @@ export class HomeComponent implements AfterViewInit, OnInit, OnDestroy {
     })
 
     this.getProjects()
-    this.store.select("projects").subscribe(data => console.log(data))
+    // this.store.select("projects").subscribe(data => console.log(data))
+    this.store.pipe(select(selectProjectCollection)).subscribe(data => console.log(data))
+
   }
 
   ngOnDestroy(): void {
