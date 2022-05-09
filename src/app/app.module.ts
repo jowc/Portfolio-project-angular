@@ -18,6 +18,8 @@ import { SharedModule } from './shared/shared.module';
 import { BlogModule } from './blog/blog.module';
 import { AdminModule } from './admin/admin.module';
 import { PagesModule } from './pages/pages.module';
+import { EffectsModule } from '@ngrx/effects';
+import { projectEffects } from './pages/store/pages.effects';
 
 
 export function playerFactory() {
@@ -32,6 +34,7 @@ export function playerFactory() {
   imports: [
     BrowserModule,
     StoreModule.forRoot(fromRoot.AppReducer),
+    EffectsModule.forRoot([projectEffects]),
     BrowserAnimationsModule,
     AppRoutingModule,
     LottieModule.forRoot({ player: playerFactory }),

@@ -4,26 +4,33 @@ import * as projectActions from './pages.action';
 
 interface state {
   projects: projectModel[],
-  loaded: boolean,
-  loading: boolean
+  status: 'pending' | 'loading' | 'success' | 'error',
+  error: string | null,
 }
 
 export const initialState: state = {
   projects: [] as projectModel[],
-  loaded: false,
-  loading: false
+  status: 'pending',
+  error: null
 }
 
 export const projectsReducer = createReducer(
   initialState,
-  on(projectActions.retrieveProject, (state, ProjectState) => (
+  on(projectActions.retrieveProject, (state) => ({ ...state, status: 'loading', error: null })),
+
+  on(projectActions.loadedProject, (state, { projects }) => (
     {
       ...state,
-      ...ProjectState
+      projects: [...projects],
+      status: 'success',
+      error: null
     }
   )),
-  on(projectActions.addProject, (state, ProjectState) => (
-    { ...state, ProjectState }
+  on(projectActions.addProject, (state, { project }) => (
+    {
+      ...state,
+      projects: [...state.projects, project]
+    }
   )),
   on(projectActions.editProject, (state, ProjectState) => (
     {
@@ -37,4 +44,5 @@ export const projectsReducer = createReducer(
       ProjectState
     }
   )),
+  on(projectActions.loadProjectError, (state, { message }) => ({ ...state, status: 'error', error: message }))
 )

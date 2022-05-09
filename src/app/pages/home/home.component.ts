@@ -10,6 +10,7 @@ import { projects } from 'src/app/store/api';
 import * as fromRoot from 'src/app/store/app.state';
 import { projectModel } from 'src/app/store/models';
 import { Container, Main } from 'tsparticles';
+import { retrieveProject } from '../store/pages.action';
 import { selectProjectCollection } from '../store/pages.selectors';
 import { particleOptionsJSON } from './particlesjs-config'
 
@@ -67,6 +68,7 @@ export class HomeComponent implements AfterViewInit, OnInit, OnDestroy {
     this.getProjects()
     // this.store.select("projects").subscribe(data => console.log(data))
     this.store.pipe(select(selectProjectCollection)).subscribe(data => console.log(data))
+    this.store.dispatch(retrieveProject())
 
   }
 
