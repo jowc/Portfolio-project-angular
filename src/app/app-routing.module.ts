@@ -16,10 +16,17 @@ const routes: Routes = [
 
 ];
 
+let configuration = {
+  preloadingStrategy: PreloadAllModules,
+  scrollPositionRestoration: 'enabled',
+  anchorScrolling: 'enabled'
+}
+
 @NgModule({
   imports: [RouterModule.forRoot(routes, {
     preloadingStrategy: PreloadAllModules,
     scrollPositionRestoration: 'enabled',
+    anchorScrolling: 'enabled'
   })],
   exports: [RouterModule]
 })

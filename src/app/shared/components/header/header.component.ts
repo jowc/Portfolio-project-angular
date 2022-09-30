@@ -3,7 +3,7 @@ import { ActivatedRoute, NavigationEnd, Router } from '@angular/router';
 import { ViewportScroller } from '@angular/common';
 
 
-import { share } from 'rxjs';
+import { share, take } from 'rxjs';
 import { gsap } from 'gsap';
 
 import { HomeComponent } from 'src/app/pages/home/home.component';
@@ -25,7 +25,11 @@ export class HeaderComponent implements OnInit, AfterViewInit {
   @ViewChild(HomeComponent) homeComponent!: HomeComponent
 
 
-  constructor(public route: ActivatedRoute, private router: Router, private scroller: ViewportScroller) { }
+  constructor(
+    public route: ActivatedRoute,
+    private router: Router,
+    private scroller: ViewportScroller
+  ) { }
 
   ngOnInit(): void {
     // this.route.fragment.subscribe(e => this.isActive = e)
@@ -50,8 +54,14 @@ export class HeaderComponent implements OnInit, AfterViewInit {
     });
   }
 
+  onClick(elementId: string): void {
+    this.scroller.scrollToAnchor(elementId);
+  }
+
+
   handleScroll() {
-    this.route.fragment.subscribe((e: any) => {
+    this.route.fragment.pipe(take(1)).subscribe((e: any) => {
+      console.log(e)
       if (e) {
         this.scroller.scrollToAnchor(e);
 

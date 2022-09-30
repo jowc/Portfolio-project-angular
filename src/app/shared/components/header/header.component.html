@@ -50,13 +50,13 @@
 
         <div class="text-center font-medium grid">
 
-          <div class="hover-menu" routerLink="/" fragment="heroContainer"
+          <div class="hover-menu" routerLink="/" fragment="heroContainer" (click)="onClick('heroContainer')"
             [class.active]="(activeFragment | async)=== ''">
             <span>Home</span>
           </div>
 
           <div class="hover-menu" routerLink="/" fragment="Projects"
-            [class.active]="(activeFragment | async)==='Projects'">
+            [class.active]="(activeFragment | async)==='Projects'" (click)="onClick('Projects')">
             <span>Projects</span>
           </div>
 

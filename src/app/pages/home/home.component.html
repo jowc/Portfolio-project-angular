@@ -1,36 +1,36 @@
 <!-- Hero Section -->
 <section id="heroContainer" class="mt-16 md:mt-20 relative" #heroContainer>
-    <ng-particles id="heroCont" [options]="particlesOptions" (particlesLoaded)="particlesLoaded($event)">
-    </ng-particles>
+  <ng-particles id="heroCont" [options]="particlesOptions" (particlesLoaded)="particlesLoaded($event)">
+  </ng-particles>
 
-    <!-- Hero Container -->
-    <section class="py-8 md:py-24" #hero>
-        <div class="cont">
+  <!-- Hero Container -->
+  <section class="py-8 md:py-24" #hero>
+    <div class="cont">
 
-            <div class="flex flex-col-reverse md:flex-row max-w-[750px] xl:mx-auto">
+      <div class="flex flex-col-reverse md:flex-row max-w-[750px] xl:mx-auto">
 
-                <div class="mt-3 md:mt-0 text-center md:text-left 
+        <div class="mt-3 md:mt-0 text-center md:text-left
                         flex flex-col justify-center items-center md:items-start md:w-3/5 font-medium">
-                    <span class="text-2xl text-gray-600">Hi 👋🏾, I'm</span>
-                    <h1>Joseph Ojiofor <br> Chikeme</h1>
-                    <h4 class="mt-3">Web Developer</h4>
-                    <p class="mt-6 mx-4 md:ml-0 md:mr-32">
-                        I'm a full-stack web developer and WordPress Elementor expert. I'm
-                        interested in clean designs, web3, and
-                        user/dev experience. I love pets🐱 too.
-                    </p>
-                    <button class="mt-9 md:mt-12 " routerLink="/contact">Let's Chat</button>
-                </div>
-
-                <div #heroImage id="heroImage">
-                    <img class="flex mx-auto md:mx-0 md:justify-self-start w-2/4 md:w-full"
-                        src="assets/cartoonized-joe.png" alt="Joseph Chikeme cartoonized" loading="lazy">
-                </div>
-
-            </div>
-
+          <span class="text-2xl text-gray-600">Hi 👋🏾, I'm</span>
+          <h1>Joseph Ojiofor <br> Chikeme</h1>
+          <h4 class="mt-3">Web Developer</h4>
+          <p class="mt-6 mx-4 md:ml-0 md:mr-32">
+            I'm a full-stack web developer and WordPress Elementor expert. I'm
+            interested in clean designs, web3, and
+            user/dev experience. I love pets🐱 too.
+          </p>
+          <button class="mt-9 md:mt-12 " routerLink="/contact">Let's Chat</button>
         </div>
-    </section>
+
+        <div #heroImage id="heroImage">
+          <img class="flex mx-auto md:mx-0 md:justify-self-start w-2/4 md:w-full" src="assets/cartoonized-joe.png"
+            alt="Joseph Chikeme cartoonized" loading="lazy">
+        </div>
+
+      </div>
+
+    </div>
+  </section>
 
 </section>
 
@@ -38,29 +38,29 @@
 <!-- Skills Section -->
 <section class="pt-10 md:pt-20 bgColor">
 
-    <section class="flex justify-center">
-        <section class="w-full contCards md:-ml-20 bg-yellow-100 rounded-3xl shadow-gray-100 shadow-lg p-7 md:p-14">
-            <div class="flex flex-col md:flex-row justify-between">
-                <div class="w-full md:w-2/3">
-                    <div class="bg-yellow-300 w-10 h-10 rounded-full">
-                        <img class="mx-auto p-2" src="assets/ninja-head-svgrepo-com.svg" alt="ninja-head-svgrepo-com">
-                    </div>
-                    <h3 class="mt-4 md:mt-8">Skills</h3>
-                    <p class="mt-3"> I've worked with <span class="font-medium">Angular, VueJs, Django, React, Firebase,
-                            Strapi, PHP, Elementor,
-                            Bootstrap and
-                            Tailwind CSS.</span> <br>I prefer working with Angular, Elementor and Django.
-                        <br>
-                        I'm enthusiastic about blockchain🧊 technology and already diving into it.
-                    </p>
-                    <h5 (click)="scroll(Projects)" class="mt-4 md:mt-8 block cursor-pointer">See Projects</h5>
-                </div>
-                <div class="w-full flex justify-end md:justify-center md:w-1/3">
-                    <ng-lottie class="w-20 md:w-44" [options]="catLottie"></ng-lottie>
-                </div>
-            </div>
-        </section>
+  <section class="flex justify-center">
+    <section class="w-full contCards md:-ml-20 bg-yellow-100 rounded-3xl shadow-gray-100 shadow-lg p-7 md:p-14">
+      <div class="flex flex-col md:flex-row justify-between">
+        <div class="w-full md:w-2/3">
+          <div class="bg-yellow-300 w-10 h-10 rounded-full">
+            <img class="mx-auto p-2" src="assets/ninja-head-svgrepo-com.svg" alt="ninja-head-svgrepo-com">
+          </div>
+          <h3 class="mt-4 md:mt-8">Skills</h3>
+          <p class="mt-3"> I've worked with <span class="font-medium">Angular, VueJs, Django, React, Firebase,
+              Strapi, PHP, Elementor,
+              Bootstrap and
+              Tailwind CSS.</span> <br>I prefer working with Angular, Elementor and Django.
+            <br>
+            I'm enthusiastic about blockchain🧊 technology and already diving into it.
+          </p>
+          <h5 (click)="scroll(Projects)" class="mt-4 md:mt-8 block cursor-pointer">See Projects</h5>
+        </div>
+        <div class="w-full flex justify-end md:justify-center md:w-1/3">
+          <ng-lottie class="w-20 md:w-44" [options]="catLottie"></ng-lottie>
+        </div>
+      </div>
     </section>
+  </section>
 
 
 </section>
@@ -88,29 +88,29 @@
 <!-- Works Section -->
 <section id="Projects" class="pt-16 pb-8 md:pt-24 bgColor flex justify-center" #Projects>
 
-    <section class="w-full contCards xl:max-w-[1050px] md:-mr-20">
+  <section class="w-full contCards xl:max-w-[1050px] md:-mr-20">
 
-        <div>
-            <h3>Works🗂️</h3>
-            <h6>Featured projects</h6>
-        </div>
+    <div>
+      <h3>Works🗂️</h3>
+      <h6>Featured projects</h6>
+    </div>
 
-        <div class="mt-8 grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-            <ng-container *ngFor="let data of projects">
-                <app-projects-card [cdata]="data"></app-projects-card>
-            </ng-container>
-        </div>
+    <div class="mt-8 grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+      <ng-container *ngFor="let data of projects">
+        <app-projects-card [cdata]="data"></app-projects-card>
+      </ng-container>
+    </div>
 
-        <div class="mt-8" *ngIf="!projectEnd">
-            <button (click)="getProject()">Load More</button>
-        </div>
+    <div class="mt-8" *ngIf="!projectEnd">
+      <button (click)="getProject()">Load More</button>
+    </div>
 
-        <div class="mt-8" *ngIf="projectEnd">
-            <a class="text-primary-500 font-medium underline underline-offset-4" href="https://github.com/jowc">View
-                More on Github</a>
-        </div>
+    <div class="mt-8" *ngIf="projectEnd">
+      <a class="text-primary-500 font-medium underline underline-offset-4" href="https://github.com/jowc">View
+        More on Github</a>
+    </div>
 
-    </section>
+  </section>
 
 
 </section>
@@ -118,36 +118,36 @@
 <!-- Technologies Section -->
 <section class="pt-16 md:mt-24 bgColor flex justify-center">
 
-    <section class="w-full contCards md:-ml-20 overflow-hidden">
+  <section class="w-full contCards md:-ml-20 overflow-hidden">
 
-        <div>
-            <h3>Technologies🪚</h3>
-            <h6>Framework & tools I use...</h6>
-        </div>
+    <div>
+      <h3>Technologies🪚</h3>
+      <h6>Framework & tools I use...</h6>
+    </div>
 
-        <div class="mt-4 md:mt-6 grid grid-cols-6 gap-4 overflow-x-auto">
+    <div class="mt-4 md:mt-6 grid grid-cols-6 gap-4 overflow-x-auto">
 
-            <div class="fTools">
-                <img class="w-14 md:w-20" src="assets/icons8-wordpress.svg" alt="icons8-wordpress">
-            </div>
-            <div class="fTools">
-                <img class="w-14 md:w-20" src="assets/icons8-angularjs.svg" alt="icons8-angularjs">
-            </div>
-            <div class="fTools">
-                <img class="w-14 md:w-20" src="assets/icons8-vuejs.svg" alt="icons8-vuejs">
-            </div>
-            <div class="fTools">
-                <img class="w-14 md:w-20" src="assets/icons8-firebase.svg" alt="icons8-firebase">
-            </div>
-            <div class="fTools">
-                <img class="w-14 md:w-20" src="assets/icons8-django.svg" alt="icons8-django">
-            </div>
-            <div class="fTools">
-                <img class="w-14 md:w-20" src="assets/icons8-elementor.svg" alt="icons8-elementor">
-            </div>
+      <div class="fTools">
+        <img class="w-14 md:w-20" src="assets/icons8-wordpress.svg" alt="icons8-wordpress">
+      </div>
+      <div class="fTools">
+        <img class="w-14 md:w-20" src="assets/icons8-angularjs.svg" alt="icons8-angularjs">
+      </div>
+      <div class="fTools">
+        <img class="w-14 md:w-20" src="assets/icons8-vuejs.svg" alt="icons8-vuejs">
+      </div>
+      <div class="fTools">
+        <img class="w-14 md:w-20" src="assets/icons8-firebase.svg" alt="icons8-firebase">
+      </div>
+      <div class="fTools">
+        <img class="w-14 md:w-20" src="assets/icons8-django.svg" alt="icons8-django">
+      </div>
+      <div class="fTools">
+        <img class="w-14 md:w-20" src="assets/icons8-elementor.svg" alt="icons8-elementor">
+      </div>
 
-        </div>
-    </section>
+    </div>
+  </section>
 
 
 </section>
@@ -155,20 +155,20 @@
 <!-- CTA Section -->
 <section class="pt-16 md:pt-28 bgColor">
 
-    <section class="flex justify-center">
-        <section class="w-full contCards xl:max-w-[700px] bg-orange-100 rounded-3xl shadow-lg p-7 md:p-20">
-            <div class="flex flex-col md:flex-row justify-between">
-                <div class="w-full md:w-1/2 md:ml-10">
-                    <h3 class="">Work Inquiry</h3>
-                    <p class="mt-3">Get in touch and let's discuss.
-                    </p>
-                </div>
-                <div class="mt-4 w-full md:w-1/2 flex justify-start md:justify-center">
-                    <button class="bg-orange-600 w-fit h-fit" routerLink="contact"> Let's Chat </button>
-                </div>
-            </div>
-        </section>
+  <section class="flex justify-center">
+    <section class="w-full contCards xl:max-w-[700px] bg-orange-100 rounded-3xl shadow-lg p-7 md:p-20">
+      <div class="flex flex-col md:flex-row justify-between">
+        <div class="w-full md:w-1/2 md:ml-10">
+          <h3 class="">Work Inquiry</h3>
+          <p class="mt-3">Get in touch and let's discuss.
+          </p>
+        </div>
+        <div class="mt-4 w-full md:w-1/2 flex justify-start md:justify-center">
+          <button class="bg-orange-600 w-fit h-fit" routerLink="contact"> Let's Chat </button>
+        </div>
+      </div>
     </section>
+  </section>
 
 
 </section>
@@ -176,11 +176,11 @@
 <!-- Lottie footer Section -->
 <section class="pt-12 pb-2 md:pt-16 bgColor">
 
-    <section class="flex justify-center">
-        <div>
-            <ng-lottie width="200px" [options]="dogLottie"></ng-lottie>
-        </div>
-    </section>
+  <section class="flex justify-center">
+    <div>
+      <ng-lottie width="200px" [options]="dogLottie"></ng-lottie>
+    </div>
+  </section>
 
 
 </section>
