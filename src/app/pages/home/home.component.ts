@@ -5,7 +5,7 @@ import { select, Store } from '@ngrx/store';
 
 
 import { AnimationOptions } from 'ngx-lottie';
-import { Observable, of, tap } from 'rxjs';
+import { Observable, of, take, tap } from 'rxjs';
 import { projects } from 'src/app/store/api';
 import * as fromRoot from 'src/app/store/app.state';
 import { projectModel } from 'src/app/store/models';
@@ -30,7 +30,7 @@ export class HomeComponent implements AfterViewInit, OnInit, OnDestroy {
 
   // projects!: Observable<projectModel[]>;
   projects!: projectModel[]
-  projectData!: projectModel[];
+  projectData$: projectModel[] = []
   projectEnd: boolean = false
 
 
@@ -59,15 +59,14 @@ export class HomeComponent implements AfterViewInit, OnInit, OnDestroy {
   ngOnInit(): void {
     this.title.setTitle("Joseph O. Chikeme")
 
-    this.route.fragment.subscribe((e: any) => {
-      if (e) {
-        this.scroll(e)
-      }
-    })
+    // this.route.fragment.subscribe((e: any) => {
+    //   if (e) {
+    //     this.scroll(e)
+    //   }
+    // })
 
     this.getProjects()
     // this.store.select("projects").subscribe(data => console.log(data))
-    this.store.pipe(select(selectProjectCollection)).subscribe(data => console.log(data))
     this.store.dispatch(retrieveProject())
 
   }
@@ -99,18 +98,22 @@ export class HomeComponent implements AfterViewInit, OnInit, OnDestroy {
 
   getProjects() {
     // this.projects = this.store.select("projects")
-    return of(projects).subscribe(data => {
-      this.projects = data.slice(0, 3)
-      this.projectData = data
-    }).unsubscribe()
+    return this.store.pipe(select(selectProjectCollection)).subscribe((data: any) => {
+      this.projects = data.projects.slice(0, 3)
+      this.projectData$ = data.projects
+    })
+
+    // return of(projects).subscribe(data => {
+
+    // }).unsubscribe()
   }
 
   getProject() {
     let projectCount = +this.projects.length
-    this.projects = this.projectData.slice(0, projectCount + 3)
+    this.projects = this.projectData$.slice(0, projectCount + 3)
     // console.log("worked")
 
-    if (this.projects.length == this.projectData.length) {
+    if (this.projects.length == this.projectData$.length) {
       this.projectEnd = true
     }
   }

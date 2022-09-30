@@ -45,13 +45,9 @@ export class HeaderComponent implements OnInit, AfterViewInit {
       if (val instanceof NavigationEnd) {
         // let fragment = val.url.replace('/#', '')
         this.isOpen = false
-        this.handleScroll()
+        // this.handleScroll()
       }
     });
-  }
-
-  scroll(el: any) {
-    el.scrollIntoView();
   }
 
   handleScroll() {

@@ -2,13 +2,13 @@ import { createReducer, on } from '@ngrx/store';
 import { projectModel } from 'src/app/store/models';
 import * as projectActions from './pages.action';
 
-interface state {
+export interface projectState {
   projects: projectModel[],
   status: 'pending' | 'loading' | 'success' | 'error',
   error: string | null,
 }
 
-export const initialState: state = {
+export const initialState: projectState = {
   projects: [] as projectModel[],
   status: 'pending',
   error: null
