@@ -12,10 +12,10 @@ export class ProjectsCardComponent implements OnInit {
   @Input() cdata: (projectModel | null) = null;
   loadDescription: boolean = false
 
+
   constructor() { }
 
   ngOnInit(): void {
-
   }
 
   checkDes(): void {

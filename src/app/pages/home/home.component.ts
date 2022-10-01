@@ -6,6 +6,7 @@ import { select, Store } from '@ngrx/store';
 
 import { AnimationOptions } from 'ngx-lottie';
 import { Observable, of, take, tap } from 'rxjs';
+import { ProjectsService } from 'src/app/shared/components/projects-card/projects-service.service';
 import { projects } from 'src/app/store/api';
 import * as fromRoot from 'src/app/store/app.state';
 import { projectModel } from 'src/app/store/models';
@@ -53,7 +54,8 @@ export class HomeComponent implements AfterViewInit, OnInit, OnDestroy {
   constructor(
     private route: ActivatedRoute,
     private store: Store<fromRoot.AppState>,
-    private title: Title
+    private title: Title,
+    private projectAPI: ProjectsService
   ) { }
 
   ngOnInit(): void {
@@ -98,6 +100,7 @@ export class HomeComponent implements AfterViewInit, OnInit, OnDestroy {
 
   getProjects() {
     // this.projects = this.store.select("projects")
+    this.projectAPI.getProjects().subscribe(data => console.log(data.data))
     return this.store.pipe(select(selectProjectCollection)).subscribe((data: any) => {
       this.projects = data.projects.slice(0, 3)
       this.projectData$ = data.projects

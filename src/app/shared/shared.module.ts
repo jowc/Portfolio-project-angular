@@ -3,6 +3,7 @@ import { CommonModule } from '@angular/common';
 import { RouterModule } from '@angular/router';
 
 import { SwiperModule } from 'swiper/angular';
+import { HttpClientModule } from '@angular/common/http';
 
 import { FooterComponent } from './components/footer/footer.component';
 import { HeaderComponent } from './components/header/header.component';
@@ -25,6 +26,7 @@ import { GallerySliderComponent } from './components/gallery-slider/gallery-slid
     CommonModule,
     RouterModule,
     SwiperModule,
+    HttpClientModule
   ],
   exports: [
     HeaderComponent,
