@@ -9,13 +9,14 @@ import { slide, fade, slide2 } from '../../animation';
   animations: [slide, fade, slide2]
 })
 export class ProjectsCardComponent implements OnInit {
-  @Input() cdata: (projectModel | null) = null;
+  @Input() cdata: (any) = null;
   loadDescription: boolean = false
 
 
   constructor() { }
 
   ngOnInit(): void {
+    // console.log(this.cdata)
   }
 
   checkDes(): void {

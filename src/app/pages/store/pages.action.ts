@@ -12,13 +12,14 @@ export const editProject = createAction(
 
 export const deleteProject = createAction('[Project Component] delete Project')
 
-export const retrieveProject = createAction(
-  '[Project component] retrieve Projects')
+export const retrieveProject = createAction('[Project component] retrieve Projects')
 
 export const loadedProject = createAction(
   '[Project component] Loaded Projects',
-  (projects: ReadonlyArray<projectModel>) => ({ projects })
+  (projects: projectModel[]) => ({ projects })
 )
+
+
 export const loadProjectError = createAction(
   '[Project component] load Projects error',
   (message: string) => ({ message })

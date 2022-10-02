@@ -5,7 +5,7 @@ import { select, Store } from '@ngrx/store';
 
 
 import { AnimationOptions } from 'ngx-lottie';
-import { Observable, of, take, tap } from 'rxjs';
+import { map, Observable, of, take, tap } from 'rxjs';
 import { ProjectsService } from 'src/app/shared/components/projects-card/projects-service.service';
 import { projects } from 'src/app/store/api';
 import * as fromRoot from 'src/app/store/app.state';
@@ -29,7 +29,7 @@ export class HomeComponent implements AfterViewInit, OnInit, OnDestroy {
   @ViewChild('Project') projectEl!: ElementRef<HTMLDivElement>
 
 
-  // projects!: Observable<projectModel[]>;
+  projects$!: Observable<any>;
   projects!: projectModel[]
   projectData$: projectModel[] = []
   projectEnd: boolean = false
@@ -60,7 +60,7 @@ export class HomeComponent implements AfterViewInit, OnInit, OnDestroy {
 
   ngOnInit(): void {
     this.title.setTitle("Joseph O. Chikeme")
-
+    this.projects$ = this.store.select("projects").pipe(map((data: any) => data.projects))
     // this.route.fragment.subscribe((e: any) => {
     //   if (e) {
     //     this.scroll(e)
