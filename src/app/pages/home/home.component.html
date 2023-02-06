@@ -96,8 +96,8 @@
     </div>
 
     <div class="mt-8 grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-      <!-- <ng-container *ngFor="let data of projects"> -->
-      <ng-container *ngFor="let data of (projects$|async)">
+      <ng-container *ngFor="let data of projects">
+        <!-- <ng-container *ngFor="let data of (projects$|async)"> -->
         <app-projects-card [cdata]="data"></app-projects-card>
       </ng-container>
     </div>

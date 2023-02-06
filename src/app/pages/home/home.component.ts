@@ -1,18 +1,18 @@
 import { AfterViewInit, Component, ElementRef, OnDestroy, OnInit, ViewChild } from '@angular/core';
 import { Title } from '@angular/platform-browser';
-import { ActivatedRoute } from '@angular/router';
-import { select, Store } from '@ngrx/store';
+// import { ActivatedRoute } from '@angular/router';
+// import { select, Store } from '@ngrx/store';
 
 
 import { AnimationOptions } from 'ngx-lottie';
 import { map, Observable, of, take, tap } from 'rxjs';
-import { ProjectsService } from 'src/app/shared/components/projects-card/projects-service.service';
+// import { ProjectsService } from 'src/app/shared/components/projects-card/projects-service.service';
 import { projects } from 'src/app/store/api';
 import * as fromRoot from 'src/app/store/app.state';
 import { projectModel } from 'src/app/store/models';
 import { Container, Main } from 'tsparticles';
-import { retrieveProject } from '../store/pages.action';
-import { selectProjectCollection } from '../store/pages.selectors';
+// import { retrieveProject } from '../store/pages.action';
+// import { selectProjectCollection } from '../store/pages.selectors';
 import { particleOptionsJSON } from './particlesjs-config'
 
 @Component({
@@ -52,15 +52,15 @@ export class HomeComponent implements AfterViewInit, OnInit, OnDestroy {
 
 
   constructor(
-    private route: ActivatedRoute,
-    private store: Store<fromRoot.AppState>,
+    // private route: ActivatedRoute,
+    // private store: Store<fromRoot.AppState>,
     private title: Title,
-    private projectAPI: ProjectsService
+    // private projectAPI: ProjectsService
   ) { }
 
   ngOnInit(): void {
     this.title.setTitle("Joseph O. Chikeme")
-    this.projects$ = this.store.select("projects").pipe(map((data: any) => data.projects))
+    // this.projects$ = this.store.select("projects").pipe(map((data: any) => data.projects))
     // this.route.fragment.subscribe((e: any) => {
     //   if (e) {
     //     this.scroll(e)
@@ -69,7 +69,7 @@ export class HomeComponent implements AfterViewInit, OnInit, OnDestroy {
 
     this.getProjects()
     // this.store.select("projects").subscribe(data => console.log(data))
-    this.store.dispatch(retrieveProject())
+    // this.store.dispatch(retrieveProject())
 
   }
 
@@ -100,15 +100,16 @@ export class HomeComponent implements AfterViewInit, OnInit, OnDestroy {
 
   getProjects() {
     // this.projects = this.store.select("projects")
-    this.projectAPI.getProjects().subscribe(data => console.log(data.data))
-    return this.store.pipe(select(selectProjectCollection)).subscribe((data: any) => {
-      this.projects = data.projects.slice(0, 3)
-      this.projectData$ = data.projects
-    })
+    // this.projectAPI.getProjects().subscribe(data => console.log(data.data))
+    // return this.store.pipe(select(selectProjectCollection)).subscribe((data: any) => {
+    //   this.projects = data.projects.slice(0, 3)
+    //   this.projectData$ = data.projects
+    // })
 
-    // return of(projects).subscribe(data => {
-
-    // }).unsubscribe()
+    return of(projects).subscribe((data) => {
+      console.log('projects local: ', data)
+      this.projects = data
+    }).unsubscribe()
   }
 
   getProject() {

@@ -14,6 +14,11 @@ export const deleteProject = createAction('[Project Component] delete Project')
 
 export const retrieveProject = createAction('[Project component] retrieve Projects')
 
+export const retrieveProjectSuccess = createAction(
+  '[Project component] retrieve Projects Success',
+  props<{ projects: projectModel[] }>()
+)
+
 export const loadedProject = createAction(
   '[Project component] Loaded Projects',
   (projects: projectModel[]) => ({ projects })
