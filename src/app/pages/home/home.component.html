@@ -15,9 +15,8 @@
           <h1>Joseph Ojiofor <br> Chikeme</h1>
           <h4 class="mt-3">Web Developer</h4>
           <p class="mt-6 mx-4 md:ml-0 md:mr-32">
-            I'm a full-stack web developer and WordPress Elementor expert. I'm
-            interested in clean designs, web3, and
-            user/dev experience. I love pets🐱 too.
+            I am an experienced Angular frontend developer. I have been working with
+            Angular since version 8, and I have a deep understanding of the framework and its features.
           </p>
           <button class="mt-9 md:mt-12 " routerLink="/contact">Let's Chat</button>
         </div>
@@ -46,12 +45,10 @@
             <img class="mx-auto p-2" src="assets/ninja-head-svgrepo-com.svg" alt="ninja-head-svgrepo-com">
           </div>
           <h3 class="mt-4 md:mt-8">Skills</h3>
-          <p class="mt-3"> I've worked with <span class="font-medium">Angular, VueJs, Django, React, Firebase,
-              Strapi, PHP, Elementor,
-              Bootstrap and
-              Tailwind CSS.</span> <br>I prefer working with Angular, Elementor and Django.
-            <br>
-            I'm enthusiastic about blockchain🧊 technology and already diving into it.
+          <p class="mt-3">
+            I am also proficient in HTML, CSS, TypeScript, RxJs, NgRx, Strapi, python Django, Node JS and JavaScript,
+            and I have experience with other
+            frontend technologies such as React and Vue.js.
           </p>
           <h5 (click)="scroll(Projects)" class="mt-4 md:mt-8 block cursor-pointer">See Projects</h5>
         </div>
@@ -96,7 +93,7 @@
     </div>
 
     <div class="mt-8 grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-      <ng-container *ngFor="let data of projects">
+      <ng-container *ngFor="let data of projectData$">
         <!-- <ng-container *ngFor="let data of (projects$|async)"> -->
         <app-projects-card [cdata]="data"></app-projects-card>
       </ng-container>

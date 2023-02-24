@@ -6,6 +6,24 @@ export const sendgridKey: string = '12b9f281aadd8eb247184900afa1b93cea905ec6c0cf
 
 export const projects: projectModel[] = [
     {
+        link: 'https://seamfix-med.vercel.app/',
+        img: 'https://res.cloudinary.com/drbrbpqdn/image/upload/v1677237103/Joecdev/joecdev_smartcheck_rnwmgo.png',
+        stacks: ['Angular', 'Tailwind CSS', 'ng Material'],
+        description: "A demo server dashboard. I designed a server dashboard using Angular and Angular material for practice purpose."
+    },
+    {
+        link: 'https://dumele.vercel.app/',
+        img: 'https://res.cloudinary.com/drbrbpqdn/image/upload/v1677237105/Joecdev/joecdev_dumele_rshlet.png',
+        stacks: ['Angular', 'Tailwind CSS', 'Gsap'],
+        description: "African tech talent hunt website. They're globally decentralized organization experienced in building excellent products and managing daily digital operations."
+    },
+    {
+        link: 'https://dumele-landing.netlify.app/',
+        img: 'https://res.cloudinary.com/drbrbpqdn/image/upload/v1677237106/Joecdev/joecdev_dumele_landing_lmrn2a.png',
+        stacks: ['Angular', 'Tailwind CSS', 'SwiperJs'],
+        description: "African tech talent hunt website Dumele landing page. They're globally decentralized organization experienced in building excellent products and managing daily digital operations."
+    },
+    {
         link: 'https://joecdev.com',
         img: 'https://res.cloudinary.com/dt8umwrcb/image/upload/v1648926926/portfolio/joecdev_seegbk.jpg',
         stacks: ['Strapi', 'Angular', 'Tailwind CSS'],

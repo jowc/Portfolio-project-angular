@@ -107,14 +107,15 @@ export class HomeComponent implements AfterViewInit, OnInit, OnDestroy {
     // })
 
     return of(projects).subscribe((data) => {
-      console.log('projects local: ', data)
+      // console.log('projects local: ', data)
       this.projects = data
+      this.projectData$ = data.slice(0, 3)
     }).unsubscribe()
   }
 
   getProject() {
     let projectCount = +this.projects.length
-    this.projects = this.projectData$.slice(0, projectCount + 3)
+    this.projectData$ = this.projects.slice(0, this.projectData$.length + 3)
     // console.log("worked")
 
     if (this.projects.length == this.projectData$.length) {
