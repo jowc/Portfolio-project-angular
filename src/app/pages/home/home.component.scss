@@ -1,11 +1,12 @@
 #heroImage {
-  background: url("../../../assets/blop.svg");
-  @apply bg-center bg-contain bg-no-repeat;
+  // background: url("../../../assets/blop.svg");
+  // @apply bg-center bg-contain bg-no-repeat;
+  img{
+    box-shadow: 11px 6px 10px 6px #e8f0bfb3;
+    border-radius: 12px 24px 12px 24px;
+  }
 }
 
 #heroCont {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  z-index: -1;
+  @apply absolute w-full h-full -z-10;
 }

@@ -54,11 +54,11 @@ body {
 }
 
 .cont {
-  @apply mx-4 md:mx-8 xl:max-w-7xl xl:mx-auto;
+  @apply mx-4 sm:mx-auto sm:max-w-7xl;
 }
 
 .contCards {
-  @apply mx-5 md:mx-8 xl:max-w-[800px];
+  @apply mx-5 sm:max-w-[800px];
 }
 
 .bgColor {

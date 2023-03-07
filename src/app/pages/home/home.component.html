@@ -4,12 +4,12 @@
   </ng-particles>
 
   <!-- Hero Container -->
-  <section class="py-8 md:py-24" #hero>
+  <section class="py-8 md:py-24 flex" #hero>
     <div class="cont">
 
       <div class="flex flex-col-reverse md:flex-row max-w-[750px] xl:mx-auto">
 
-        <div class="mt-3 md:mt-0 text-center md:text-left
+        <div class="mt-9 md:mt-0 text-center md:text-left
                         flex flex-col justify-center items-center md:items-start md:w-3/5 font-medium">
           <span class="text-2xl text-gray-600">Hi 👋🏾, I'm</span>
           <h1>Joseph Ojiofor <br> Chikeme</h1>
@@ -22,8 +22,9 @@
         </div>
 
         <div #heroImage id="heroImage">
-          <img class="flex mx-auto md:mx-0 md:justify-self-start w-2/4 md:w-full" src="assets/cartoonized-joe.png"
-            alt="Joseph Chikeme cartoonized" loading="lazy">
+          <img class="flex mx-auto md:mx-0 md:justify-self-start w-2/4 rounded-full md:w-72"
+            src="https://res.cloudinary.com/drbrbpqdn/image/upload/v1678184835/Joecdev/Joseph_Chikeme_hw7sxz.webp"
+            alt="Joseph Chikeme" loading="lazy">
         </div>
 
       </div>
@@ -38,7 +39,7 @@
 <section class="pt-10 md:pt-20 bgColor">
 
   <section class="flex justify-center">
-    <section class="w-full contCards md:-ml-20 bg-yellow-100 rounded-3xl shadow-gray-100 shadow-lg p-7 md:p-14">
+    <section class="w-full contCards lg:-ml-20 bg-yellow-100 rounded-3xl shadow-gray-100 shadow-lg p-7 md:p-14">
       <div class="flex flex-col md:flex-row justify-between">
         <div class="w-full md:w-2/3">
           <div class="bg-yellow-300 w-10 h-10 rounded-full">
@@ -85,14 +86,14 @@
 <!-- Works Section -->
 <section id="Projects" class="pt-16 pb-8 md:pt-24 bgColor flex justify-center" #Projects>
 
-  <section class="w-full contCards xl:max-w-[1050px] md:-mr-20">
+  <section class="w-full contCards xl:max-w-[1050px] lg:-mr-20">
 
     <div>
       <h3>Works🗂️</h3>
       <h6>Featured projects</h6>
     </div>
 
-    <div class="mt-8 grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+    <div class="mt-8 grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
       <ng-container *ngFor="let data of projectData$">
         <!-- <ng-container *ngFor="let data of (projects$|async)"> -->
         <app-projects-card [cdata]="data"></app-projects-card>
@@ -116,7 +117,7 @@
 <!-- Technologies Section -->
 <section class="pt-16 md:mt-24 bgColor flex justify-center">
 
-  <section class="w-full contCards md:-ml-20 overflow-hidden">
+  <section class="w-full contCards lg:-ml-20 overflow-hidden">
 
     <div>
       <h3>Technologies🪚</h3>
