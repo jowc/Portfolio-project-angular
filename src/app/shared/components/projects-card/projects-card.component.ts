@@ -1,5 +1,4 @@
 import { Component, Input, OnInit } from '@angular/core';
-import { projectModel } from 'src/app/store/models';
 import { slide, fade, slide2 } from '../../animation';
 
 @Component({

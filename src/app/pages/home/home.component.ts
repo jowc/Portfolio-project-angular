@@ -1,8 +1,14 @@
-import { AfterViewInit, Component, ElementRef, OnDestroy, OnInit, ViewChild } from '@angular/core';
+import {
+  AfterViewInit,
+  Component,
+  ElementRef,
+  OnDestroy,
+  OnInit,
+  ViewChild,
+} from '@angular/core';
 import { Title } from '@angular/platform-browser';
 // import { ActivatedRoute } from '@angular/router';
 // import { select, Store } from '@ngrx/store';
-
 
 import { AnimationOptions } from 'ngx-lottie';
 import { map, Observable, of, take, tap } from 'rxjs';
@@ -13,30 +19,30 @@ import { projectModel } from 'src/app/store/models';
 import { Container, Main } from 'tsparticles';
 // import { retrieveProject } from '../store/pages.action';
 // import { selectProjectCollection } from '../store/pages.selectors';
-import { particleOptionsJSON } from './particlesjs-config'
+import { particleOptionsJSON } from './particlesjs-config';
+// import { fade } from 'src/app/shared/animation';
 
 @Component({
   selector: 'app-home',
   templateUrl: './home.component.html',
-  styleUrls: ['./home.component.scss']
+  styleUrls: ['./home.component.scss'],
+  // animations: [fade]
 })
 export class HomeComponent implements AfterViewInit, OnInit, OnDestroy {
-  id = "z";
+  id = 'z';
   @ViewChild('heroContainer')
   div!: ElementRef<HTMLElement>;
 
-  @ViewChild('heroContainer') heroEl!: ElementRef<HTMLDivElement>
-  @ViewChild('Project') projectEl!: ElementRef<HTMLDivElement>
-
+  @ViewChild('heroContainer') heroEl!: ElementRef<HTMLDivElement>;
+  @ViewChild('Project') projectEl!: ElementRef<HTMLDivElement>;
 
   projects$!: Observable<any>;
-  projects!: projectModel[]
-  projectData$: projectModel[] = []
-  projectEnd: boolean = false
-
+  projects!: projectModel[];
+  projectData$: projectModel[] = [];
+  projectEnd: boolean = false;
 
   /* or the classic JavaScript object */
-  particlesOptions: any = particleOptionsJSON
+  particlesOptions: any = particleOptionsJSON;
 
   catLottie: AnimationOptions = {
     path: 'https://assets2.lottiefiles.com/packages/lf20_m3lpL4.json',
@@ -50,16 +56,15 @@ export class HomeComponent implements AfterViewInit, OnInit, OnDestroy {
     path: 'https://assets2.lottiefiles.com/packages/lf20_5JFpAw.json',
   };
 
-
   constructor(
     // private route: ActivatedRoute,
     // private store: Store<fromRoot.AppState>,
-    private title: Title,
-    // private projectAPI: ProjectsService
-  ) { }
+    private title: Title
+  ) // private projectAPI: ProjectsService
+  {}
 
   ngOnInit(): void {
-    this.title.setTitle("Joseph O. Chikeme")
+    this.title.setTitle('Joseph O. Chikeme');
     // this.projects$ = this.store.select("projects").pipe(map((data: any) => data.projects))
     // this.route.fragment.subscribe((e: any) => {
     //   if (e) {
@@ -67,10 +72,9 @@ export class HomeComponent implements AfterViewInit, OnInit, OnDestroy {
     //   }
     // })
 
-    this.getProjects()
+    this.getProjects();
     // this.store.select("projects").subscribe(data => console.log(data))
     // this.store.dispatch(retrieveProject())
-
   }
 
   ngOnDestroy(): void {
@@ -80,9 +84,7 @@ export class HomeComponent implements AfterViewInit, OnInit, OnDestroy {
   ngAfterViewInit(): void {
     // this.div.nativeElement.style.height = '400px'
     // console.log(this.div)
-
   }
-
 
   particlesLoaded(container: Container): void {
     // console.log(container.canvas.size);
@@ -91,7 +93,7 @@ export class HomeComponent implements AfterViewInit, OnInit, OnDestroy {
   particlesInit(main: Main): any {
     // main.set('z', this.div)
     // console.log(main);
-    return
+    return;
   }
 
   scroll(el: any) {
@@ -106,21 +108,22 @@ export class HomeComponent implements AfterViewInit, OnInit, OnDestroy {
     //   this.projectData$ = data.projects
     // })
 
-    return of(projects).subscribe((data) => {
-      // console.log('projects local: ', data)
-      this.projects = data
-      this.projectData$ = data.slice(0, 3)
-    }).unsubscribe()
+    return of(projects)
+      .subscribe((data) => {
+        // console.log('projects local: ', data)
+        this.projects = data;
+        this.projectData$ = data.slice(0, 3);
+      })
+      .unsubscribe();
   }
 
   getProject() {
-    let projectCount = +this.projects.length
-    this.projectData$ = this.projects.slice(0, this.projectData$.length + 3)
+    let projectCount = +this.projects.length;
+    this.projectData$ = this.projects.slice(0, this.projectData$.length + 3);
     // console.log("worked")
 
     if (this.projects.length == this.projectData$.length) {
-      this.projectEnd = true
+      this.projectEnd = true;
     }
   }
-
 }
