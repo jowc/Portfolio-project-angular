@@ -14,7 +14,7 @@ export let fade = trigger('fade', [
     })
   ),
 
-  transition(':enter', [animate('0.8s ease-in')]),
+  transition(':enter, :leave', [animate('0.8s ease-in')]),
 ]);
 
 export let slide = trigger('slide', [

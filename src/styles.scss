@@ -51,6 +51,9 @@ body {
   button {
     @apply px-5 py-2 bg-primary-500 text-white font-medium hover:scale-95 hover:bg-black transition-transform duration-300 rounded-lg shadow-md;
   }
+  img {
+    @apply relative text-[0];
+  }
 }
 
 .cont {
@@ -67,4 +70,18 @@ body {
 
 .projCard {
   @apply max-w-md;
+}
+
+//bg skeleton animation
+.ghost-loader {
+  animation: ghostAnimation 1.5s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+
+@keyframes ghostAnimation {
+  from {
+    background-color: #f1f1f1;
+  }
+  to {
+    background-color: #e4e4e4;
+  }
 }

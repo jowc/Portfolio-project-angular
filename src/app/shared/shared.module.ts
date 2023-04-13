@@ -11,6 +11,8 @@ import { HeaderComponent } from './components/header/header.component';
 import { ProjectsCardComponent } from './components/projects-card/projects-card.component';
 import { ImageSiderComponent } from './components/image-sider/image-sider.component';
 import { GallerySliderComponent } from './components/gallery-slider/gallery-slider.component';
+import { ImageSkeletonModule } from './components/img-skeleton-loader/img-skeleton-loader.module';
+import { GhostLoaderDirective } from './directives/ghost-loader-loader.directive';
 
 @NgModule({
   declarations: [
@@ -19,6 +21,7 @@ import { GallerySliderComponent } from './components/gallery-slider/gallery-slid
     ProjectsCardComponent,
     ImageSiderComponent,
     GallerySliderComponent,
+    GhostLoaderDirective,
   ],
   imports: [
     CommonModule,
@@ -26,6 +29,7 @@ import { GallerySliderComponent } from './components/gallery-slider/gallery-slid
     RouterModule,
     SwiperModule,
     HttpClientModule,
+    ImageSkeletonModule,
   ],
   exports: [
     HeaderComponent,
@@ -33,6 +37,7 @@ import { GallerySliderComponent } from './components/gallery-slider/gallery-slid
     ProjectsCardComponent,
     ImageSiderComponent,
     GallerySliderComponent,
+    GhostLoaderDirective,
   ],
   providers: [],
 })
