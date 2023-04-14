@@ -4,6 +4,7 @@ import {
   style,
   animate,
   transition,
+  AnimationTriggerMetadata,
 } from '@angular/animations';
 
 export let fade = trigger('fade', [
@@ -17,7 +18,7 @@ export let fade = trigger('fade', [
   transition(':enter, :leave', [animate('0.8s ease-in')]),
 ]);
 
-export let slide = trigger('slide', [
+export let slide: AnimationTriggerMetadata = trigger('slide', [
   state(
     'void',
     style({
@@ -25,7 +26,7 @@ export let slide = trigger('slide', [
     })
   ),
 
-  transition(':enter, :leave', [animate('1.2s ease-in')]),
+  transition(':enter, :leave', [animate('0.3s ease-in')]),
 ]);
 
 export let slide2 = trigger('slide', [

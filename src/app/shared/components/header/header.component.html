@@ -1,17 +1,23 @@
 <nav class="relative font-mont">
-  <div class="w-full fixed top-0 z-50 backdrop-blur-sm bg-white/60 overflow-hidden">
-
+  <div
+    class="w-full fixed top-0 z-50 backdrop-blur-sm bg-white/60 overflow-hidden"
+  >
     <div class="py-4 px-0 sm:px-5 lg:px-8 border border-b-2 border-gray-100/70">
-
       <div class="cont flex justify-between items-start">
-
         <section class="w-4/12 md:w-3/12">
-          <img class="w-[114px] md:w-[160px] cursor-pointer" src="assets/joecdevlogo1.png" alt="joecdevlogo"
-            routerLink="/">
+          <img
+            class="w-[114px] md:w-[160px] cursor-pointer"
+            src="assets/joecdevlogo1.png"
+            alt="joecdevlogo"
+            routerLink="/"
+          />
         </section>
 
         <section class="w-3/12 hidden md:block text-left">
-          <span class="leading-3 text-gray-500 font-medium">Web <br> Developer</span>
+          <span class="leading-3 text-gray-500 font-medium"
+            >Web <br />
+            Developer</span
+          >
         </section>
 
         <section class="w-6/12 self-center">
@@ -21,42 +27,58 @@
         </section>
 
         <section class="w-1/12 -700 self-center flex justify-end">
-
           <div class="cursor-pointer" (click)="toggleMenu()">
-
-            <ng-container *ngIf="!isOpen; else menuCancel;">
-              <svg class="fill-gray-600" width="24px" height="24px" viewBox="0 0 24 24" fill="none"
-                xmlns="http://www.w3.org/2000/svg">
-                <path d="M4 7H12M20 7H16M4 12H20M4 17H8M20 17H12" stroke="#001A72" stroke-width="1.5"
-                  stroke-linecap="round" stroke-linejoin="round" />
+            <ng-container *ngIf="!isOpen; else menuCancel">
+              <svg
+                class="fill-gray-600"
+                width="24px"
+                height="24px"
+                viewBox="0 0 24 24"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M4 7H12M20 7H16M4 12H20M4 17H8M20 17H12"
+                  stroke="#001A72"
+                  stroke-width="1.5"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
               </svg>
             </ng-container>
             <ng-template #menuCancel>
-              <img class="w-4" src="assets/close-svgrepo-com.svg" alt="menu-close">
+              <img
+                class="w-4"
+                src="assets/close-svgrepo-com.svg"
+                alt="menu-close"
+              />
             </ng-template>
-
           </div>
-
-
         </section>
       </div>
-
-
     </div>
 
     <!-- Drop-Down Menu -->
     <ng-container *ngIf="isOpen">
-      <div class="w-full border-b-2 border-gray-100/50 h-2/6" @fade>
-
+      <div class="w-full border-b-2 border-gray-100/50 h-2/6" @slide>
         <div class="text-center font-medium grid">
-
-          <div class="hover-menu" routerLink="/" fragment="heroContainer" (click)="onClick('heroContainer')"
-            [class.active]="(activeFragment | async)=== ''">
+          <div
+            class="hover-menu"
+            routerLink="/"
+            fragment="heroContainer"
+            (click)="onClick('heroContainer')"
+            [class.active]="(activeFragment | async) === ''"
+          >
             <span>Home</span>
           </div>
 
-          <div class="hover-menu" routerLink="/" fragment="Projects"
-            [class.active]="(activeFragment | async)==='Projects'" (click)="onClick('Projects')">
+          <div
+            class="hover-menu"
+            routerLink="/"
+            fragment="Projects"
+            [class.active]="(activeFragment | async) === 'Projects'"
+            (click)="onClick('Projects')"
+          >
             <span>Projects</span>
           </div>
 
@@ -65,15 +87,16 @@
                         <span>Blog</span>
                     </div> -->
 
-          <div class="hover-menu" routerLink="/contact" routerLinkActive="active"
-            [routerLinkActiveOptions]="{exact:true}">
+          <div
+            class="hover-menu"
+            routerLink="/contact"
+            routerLinkActive="active"
+            [routerLinkActiveOptions]="{ exact: true }"
+          >
             <span>Contact</span>
           </div>
-
         </div>
       </div>
     </ng-container>
-
   </div>
-
 </nav>
