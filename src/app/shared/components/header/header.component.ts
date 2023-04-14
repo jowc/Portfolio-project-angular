@@ -7,13 +7,13 @@ import { share, take } from 'rxjs';
 import { gsap } from 'gsap';
 
 import { HomeComponent } from 'src/app/pages/home/home.component';
-import { fade } from '../../animation';
+import { slide } from '../../animation';
 
 @Component({
   selector: 'app-header',
   templateUrl: './header.component.html',
   styleUrls: ['./header.component.scss'],
-  animations: [fade]
+  animations: [slide]
 })
 export class HeaderComponent implements OnInit, AfterViewInit {
   isOpen: boolean = false

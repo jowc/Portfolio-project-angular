@@ -21,12 +21,11 @@ export let slide = trigger('slide', [
   state(
     'void',
     style({
-      height: 'initial',
-      opacity: 0,
+      height: '0px',
     })
   ),
 
-  transition(':enter', [animate('1.2s ease')]),
+  transition(':enter, :leave', [animate('1.2s ease-in')]),
 ]);
 
 export let slide2 = trigger('slide', [
