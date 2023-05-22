@@ -78,10 +78,7 @@ body {
 }
 
 @keyframes ghostAnimation {
-  from {
-    background-color: #f1f1f1;
-  }
-  to {
-    background-color: #e4e4e4;
+  50% {
+    background-color: #f1f1f180;
   }
 }
