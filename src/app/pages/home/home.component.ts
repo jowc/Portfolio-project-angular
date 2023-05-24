@@ -14,7 +14,7 @@ import { AnimationOptions } from 'ngx-lottie';
 import { map, Observable, of, take, tap } from 'rxjs';
 // import { ProjectsService } from 'src/app/shared/components/projects-card/projects-service.service';
 import { projects } from 'src/app/store/api';
-import * as fromRoot from 'src/app/store/app.state';
+// import * as fromRoot from 'src/app/store/app.state';
 import { projectModel } from 'src/app/store/models';
 import { Container, Main } from 'tsparticles';
 // import { retrieveProject } from '../store/pages.action';

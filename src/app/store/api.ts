@@ -5,6 +5,20 @@ export const sendgridKey: string =
 
 export const projects: projectModel[] = [
   {
+    link: 'https://lentii.com/',
+    img: 'https://res.cloudinary.com/drbrbpqdn/image/upload/v1684966418/Joecdev/Screenshot_2023-05-24_at_10.55.40_PM_Large_q3hwdf.jpg',
+    stacks: ['Angular', 'Tailwind CSS', 'NG Boostrap'],
+    description:
+      'Lentii is an innovative web scraping SaaS travel planner application for travel agents, groups, and individuals. I revamped the landing page, fixed and added features to the dashboard.',
+  },
+  {
+    link: 'https://fida-dashboard.vercel.app/',
+    img: 'https://res.cloudinary.com/drbrbpqdn/image/upload/v1684967247/Joecdev/Screenshot_2023-05-24_at_10.39.18_PM_Large_wlhkpk.jpg',
+    stacks: ['Angular', 'Tailwind CSS', 'ng Material'],
+    description:
+      'Fida is a startup talent marketplace to find skilled professionals.',
+  },
+  {
     link: 'https://seamfix-med.vercel.app/',
     img: 'https://res.cloudinary.com/drbrbpqdn/image/upload/v1677237103/Joecdev/joecdev_smartcheck_rnwmgo.png',
     stacks: ['Angular', 'Tailwind CSS', 'ng Material'],

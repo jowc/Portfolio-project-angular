@@ -1,10 +1,10 @@
 .card {
-  @apply h-full rounded-lg shadow-md overflow-hidden;
+  // @apply h-full rounded-lg shadow-md overflow-hidden;
 
   &-img {
     @apply w-full h-full object-cover object-center;
   }
   &-chips {
-    @apply bg-[#9372bbe3] text-white w-fit py-[2px] px-2 shadow rounded-3xl;
+    // @apply bg-[#9372bbe3] text-white w-fit py-[2px] px-2 shadow rounded-3xl;
   }
 }
