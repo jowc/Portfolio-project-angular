@@ -82,6 +82,13 @@ export const projects: projectModel[] = [
       'This is a demo dashboard project built using Angular material and High Chart library. Dynamic data is been fetched and displayed on the dashboard.',
   },
   {
+    link: 'https://ronas-dribble.vercel.app/',
+    img: 'https://res.cloudinary.com/drbrbpqdn/image/upload/v1694120476/Joecdev/ronas_dribbble_dwjnp4.jpg',
+    stacks: ['Angular', 'Tailwind', 'GSAP'],
+    description:
+      "I cloned a dribble video design, it isn't mobile responsive yet. Design Credit: https://dribbble.com/shots/21522044-Insurance-Website",
+  },
+  {
     link: 'https://tranquil-waters-46809.herokuapp.com/',
     img: 'https://res.cloudinary.com/dt8umwrcb/image/upload/v1633522869/portfolio/CareerPath.gif',
     stacks: ['Django', 'Tailwind CSS', 'API'],
