@@ -43,3 +43,11 @@ export class cForm {
     private message: string
   ) { }
 }
+
+
+export enum StatusEnum {
+  PENDING = 'pending',
+  LOADING = 'loading',
+  SUCCESS = 'success',
+  ERROR = 'error',
+}
