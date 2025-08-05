@@ -75,10 +75,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "browserTarget": "joecdev:build:production"
+              "buildTarget": "joecdev:build:production"
             },
             "development": {
-              "browserTarget": "joecdev:build:development"
+              "buildTarget": "joecdev:build:development"
             }
           },
           "defaultConfiguration": "development"
@@ -86,7 +86,7 @@
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "joecdev:build"
+            "buildTarget": "joecdev:build"
           }
         },
         "test": {
