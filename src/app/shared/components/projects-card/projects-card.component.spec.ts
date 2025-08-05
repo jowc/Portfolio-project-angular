@@ -8,15 +8,11 @@ describe('ProjectsCardComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ ProjectsCardComponent ]
-    })
-    .compileComponents();
-  });
+      declarations: [ProjectsCardComponent],
+    }).compileComponents();
 
-  beforeEach(() => {
     fixture = TestBed.createComponent(ProjectsCardComponent);
     component = fixture.componentInstance;
-    fixture.detectChanges();
   });
 
   it('should create', () => {
