@@ -3,7 +3,7 @@ import { CommonModule } from '@angular/common';
 import { RouterModule } from '@angular/router';
 import { FormsModule } from '@angular/forms';
 
-import { NgParticlesModule } from 'ng-particles';
+import { NgxParticlesModule } from '@tsparticles/angular';
 import { LottieModule } from 'ngx-lottie';
 import { SharedModule } from '../shared/shared.module';
 
@@ -17,9 +17,9 @@ import { ContactComponent } from './contact/contact.component';
     CommonModule,
     RouterModule,
     FormsModule,
-    NgParticlesModule,
     LottieModule,
     SharedModule,
+    NgxParticlesModule,
   ],
 })
 export class PagesModule {}
