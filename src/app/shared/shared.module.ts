@@ -9,8 +9,6 @@ import { HttpClientModule } from '@angular/common/http';
 import { FooterComponent } from './components/footer/footer.component';
 import { HeaderComponent } from './components/header/header.component';
 import { ProjectsCardComponent } from './components/projects-card/projects-card.component';
-import { ImageSiderComponent } from './components/image-sider/image-sider.component';
-import { GallerySliderComponent } from './components/gallery-slider/gallery-slider.component';
 import { ImageSkeletonModule } from './components/img-skeleton-loader/img-skeleton-loader.module';
 import { GhostLoaderDirective } from './directives/ghost-loader-loader.directive';
 
@@ -19,8 +17,6 @@ import { GhostLoaderDirective } from './directives/ghost-loader-loader.directive
     HeaderComponent,
     FooterComponent,
     ProjectsCardComponent,
-    ImageSiderComponent,
-    GallerySliderComponent,
     GhostLoaderDirective,
   ],
   imports: [
@@ -35,8 +31,6 @@ import { GhostLoaderDirective } from './directives/ghost-loader-loader.directive
     HeaderComponent,
     FooterComponent,
     ProjectsCardComponent,
-    ImageSiderComponent,
-    GallerySliderComponent,
     GhostLoaderDirective,
   ],
   providers: [],
