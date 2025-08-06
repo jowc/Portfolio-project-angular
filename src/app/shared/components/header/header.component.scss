@@ -9,3 +9,7 @@
 .hover-menu {
   @apply hover:bg-primary-500/80 hover:text-white hover:font-semibold py-3 cursor-pointer;
 }
+
+ul{
+  list-style: none;
+}

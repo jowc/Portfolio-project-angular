@@ -22,12 +22,12 @@
 
         <section class="w-6/12 self-center">
           <span class="font-semibold text-primary-500">
-            <a href="mailto:joecdev@gmail.com">joecdev&#64;gmail.com</a>
+            <a href="mailto:joe cdev@gmail.com">joecdev&#64;gmail.com</a>
           </span>
         </section>
 
         <section class="w-1/12 -700 self-center flex justify-end">
-          <div class="cursor-pointer" data-test-id="menu-toggle" role="button" aria-controls="header-drop-menu" tabindex="0" attr.aria-label="{{isOpen ? 'open' : 'close'}}"  (click)="toggleMenu()" (keyup.enter)="toggleMenu()">
+          <div class="cursor-pointer" data-test-id="menu-toggle" role="button" aria-controls="header-drop-menu" tabindex="0" [attr.aria-label]="isOpen ? 'open' : 'close'" [attr.aria-pressed]="isOpen"  (click)="toggleMenu()" (keyup.enter)="toggleMenu()">
             <ng-container *ngIf="!isOpen; else menuCancel">
               <svg
                 class="fill-gray-600"
@@ -61,45 +61,51 @@
     <!-- Drop-Down Menu -->
     <ng-container *ngIf="isOpen">
       <div id="header-drop-menu" class="w-full border-b-2 border-gray-100/50 h-2/6" data-test-id="header-drop-menu" aria-live="assertive" @slide>
-        <div class="text-center font-medium grid">
-          <div
-            class="hover-menu"
-            routerLink="/"
-            fragment="heroContainer"
-            (click)="onClick('heroContainer')"
-            [class.active]="(activeFragment | async) === ''"
-          >
-            <span>Home</span>
-          </div>
+        <ul class="text-center font-medium grid">
+          <li  class="hover-menu">
+            <a
+              routerLink="/"
+              fragment="heroContainer"
+              (click)="onClick('heroContainer')"
+              [class.active]="(activeFragment | async) === ''"
+            >
+              <span>Home</span>
+            </a>
+          </li>
 
-          <div
-            class="hover-menu"
-            routerLink="/"
-            fragment="Projects"
-            [class.active]="(activeFragment | async) === 'Projects'"
-            (click)="onClick('Projects')"
-          >
-            <span>Projects</span>
-          </div>
+          <li  class="hover-menu">
+            <a
+              routerLink="/"
+              fragment="Projects"
+              [class.active]="(activeFragment | async) === 'Projects'"
+              (click)="onClick('Projects')"
+            >
+              <span>Projects</span>
+            </a>
+          </li>
 
           <!-- <div class="hover-menu" routerLink="/blog" routerLinkActive="active"
                         [routerLinkActiveOptions]="{exact:true}">
                         <span>Blog</span>
                     </div> -->
 
-          <a class="hover-menu" href="https://medium.com/@ojiofor" rel="nofollow">
-            <span>Blog</span>
-          </a>
+          <li  class="hover-menu">
 
-          <div
-            class="hover-menu"
-            routerLink="/contact"
-            routerLinkActive="active"
-            [routerLinkActiveOptions]="{ exact: true }"
-          >
-            <span>Contact</span>
-          </div>
-        </div>
+            <a href="https://medium.com/@ojiofor" rel="nofollow">
+              <span>Blog</span>
+            </a>
+          </li>
+
+          <li  class="hover-menu">
+            <a
+              routerLink="/contact"
+              routerLinkActive="active"
+              [routerLinkActiveOptions]="{ exact: true }"
+            >
+              <span>Contact</span>
+            </a>
+          </li>
+        </ul>
       </div>
     </ng-container>
   </div>
