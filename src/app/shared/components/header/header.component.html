@@ -27,7 +27,7 @@
         </section>
 
         <section class="w-1/12 -700 self-center flex justify-end">
-          <div class="cursor-pointer" (click)="toggleMenu()">
+          <div class="cursor-pointer" data-test-id="menu-toggle" role="button" aria-controls="header-drop-menu" tabindex="0" attr.aria-label="{{isOpen ? 'open' : 'close'}}"  (click)="toggleMenu()" (keyup.enter)="toggleMenu()">
             <ng-container *ngIf="!isOpen; else menuCancel">
               <svg
                 class="fill-gray-600"
@@ -60,7 +60,7 @@
 
     <!-- Drop-Down Menu -->
     <ng-container *ngIf="isOpen">
-      <div class="w-full border-b-2 border-gray-100/50 h-2/6" @slide>
+      <div id="header-drop-menu" class="w-full border-b-2 border-gray-100/50 h-2/6" data-test-id="header-drop-menu" aria-live="assertive" @slide>
         <div class="text-center font-medium grid">
           <div
             class="hover-menu"
