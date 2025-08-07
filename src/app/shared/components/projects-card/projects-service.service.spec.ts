@@ -1,12 +1,10 @@
 import { TestBed } from '@angular/core/testing';
 
 import { ProjectsService } from './projects-service.service';
-import {
-  HttpClientTestingModule,
-  HttpTestingController,
-} from '@angular/common/http/testing';
+import { HttpTestingController, provideHttpClientTesting } from '@angular/common/http/testing';
 import MockProjects from './store/mock';
 import { environment } from 'src/environments/environment';
+import { provideHttpClient, withInterceptorsFromDi } from '@angular/common/http';
 
 describe('ProjectsService', () => {
   let service: ProjectsService;
@@ -14,9 +12,9 @@ describe('ProjectsService', () => {
 
   beforeEach(() => {
     TestBed.configureTestingModule({
-      providers: [ProjectsService],
-      imports: [HttpClientTestingModule],
-    });
+    imports: [],
+    providers: [ProjectsService, provideHttpClient(withInterceptorsFromDi()), provideHttpClientTesting()]
+});
     service = TestBed.inject(ProjectsService);
     httpTestingController = TestBed.inject(HttpTestingController);
   });
