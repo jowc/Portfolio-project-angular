@@ -1,7 +1,8 @@
 import { Directive, ElementRef } from '@angular/core';
 
 @Directive({
-  selector: '[ghost-loader]',
+    selector: '[ghost-loader]',
+    standalone: false
 })
 export class GhostLoaderDirective {
   constructor(private elRef: ElementRef<HTMLElement>) {

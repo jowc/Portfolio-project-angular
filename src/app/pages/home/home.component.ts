@@ -15,9 +15,10 @@ import { projectModel } from 'src/app/store/models';
 import { particleOptionsJSON } from './particlesjs-config';
 
 @Component({
-  selector: 'app-home',
-  templateUrl: './home.component.html',
-  styleUrls: ['./home.component.scss'],
+    selector: 'app-home',
+    templateUrl: './home.component.html',
+    styleUrls: ['./home.component.scss'],
+    standalone: false
 })
 export class HomeComponent implements AfterViewInit, OnInit, OnDestroy {
   id = 'z';
