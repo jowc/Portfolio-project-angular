@@ -46,7 +46,7 @@ export function playerFactory() {
       maxAge: 25,
       logOnly: environment.production,
       autoPause: true,
-    }),
+    connectInZone: true}),
   ],
   providers: [],
   bootstrap: [AppComponent]
