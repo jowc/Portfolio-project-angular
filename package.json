@@ -19,18 +19,18 @@
     "@angular/platform-browser-dynamic": "^19.2.14",
     "@angular/router": "^19.2.14",
     "@ngrx/effects": "^19.2.1",
+    "@ngrx/operators": "^18.0.0",
     "@ngrx/store": "^19.2.1",
     "@ngrx/store-devtools": "^19.2.1",
     "@tsparticles/angular": "^3.0.0",
     "@tsparticles/engine": "^3.9.1",
     "gsap": "^3.9.1",
     "lottie-web": "^5.13.0",
-    "ngx-lottie": "^8.3.0",
+    "ngx-lottie": "^10.0.0",
     "rxjs": "~7.5.0",
     "swiper": "^8.0.7",
     "tslib": "^2.3.0",
-    "zone.js": "~0.15.1",
-    "@ngrx/operators": "^18.0.0"
+    "zone.js": "~0.15.1"
   },
   "devDependencies": {
     "@angular-devkit/build-angular": "^19.2.15",
