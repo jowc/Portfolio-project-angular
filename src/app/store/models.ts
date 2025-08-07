@@ -1,8 +1,8 @@
 export interface projectModel {
-  link: string,
-  img: string,
-  stacks: string[],
-  description: string,
+  link: string;
+  img: string;
+  stacks: string[];
+  description: string;
 }
 
 export interface galleryModel {
