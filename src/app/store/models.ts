@@ -1,8 +1,8 @@
 export interface projectModel {
-  link: string,
-  img: string,
-  stacks: string[],
-  description: string,
+  link: string;
+  img: string;
+  stacks: string[];
+  description: string;
 }
 
 export interface galleryModel {
@@ -42,4 +42,12 @@ export class cForm {
     private email: string,
     private message: string
   ) { }
+}
+
+
+export enum StatusEnum {
+  PENDING = 'pending',
+  LOADING = 'loading',
+  SUCCESS = 'success',
+  ERROR = 'error',
 }

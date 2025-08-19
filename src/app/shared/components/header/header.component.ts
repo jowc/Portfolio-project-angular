@@ -10,10 +10,11 @@ import { HomeComponent } from 'src/app/pages/home/home.component';
 import { slide } from '../../animation';
 
 @Component({
-  selector: 'app-header',
-  templateUrl: './header.component.html',
-  styleUrls: ['./header.component.scss'],
-  animations: [slide]
+    selector: 'app-header',
+    templateUrl: './header.component.html',
+    styleUrls: ['./header.component.scss'],
+    animations: [slide],
+    standalone: false
 })
 export class HeaderComponent implements OnInit, AfterViewInit {
   isOpen: boolean = false

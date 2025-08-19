@@ -1,10 +1,10 @@
 <!-- Hero Section -->
 <section id="heroContainer" class="mt-16 md:mt-20 relative" #heroContainer>
-  <ng-particles
+  <ngx-particles
     id="heroCont"
     [options]="particlesOptions"
   >
-  </ng-particles>
+  </ngx-particles>
 
   <!-- Hero Container -->
   <section class="py-8 md:py-24 flex" #hero>
@@ -18,7 +18,7 @@
             Joseph Ojiofor <br />
             Chikeme
           </h1>
-          <h4 class="mt-3">Web Developer</h4>
+          <h2 class="mt-3 text-lg sm:text-xl">Fullstack Angular Developer</h2>
           <p class="mt-6 mx-4 md:ml-0 md:mr-32">
             I'm a web developer with 8 years of overall experience and 5 years of Angular experience. I have extensive experience
             working with Angular and am well-versed in its features. I'm currently learning web3.
@@ -32,7 +32,7 @@
           <img
             class="flex mx-auto md:mx-0 md:justify-self-start w-2/3 rounded-full md:w-80 md:h-80 object-cover"
             src="https://res.cloudinary.com/drbrbpqdn/image/upload/v1678192638/Joecdev/Joseph_Chikeme_pp2_bijit5.webp"
-            alt="Joseph Chikeme"
+            alt="Joseph Chikeme picture"
             loading="lazy"
             ghost-loader
           />
@@ -63,12 +63,12 @@
             python Django, NestJS and JavaScript, and I have experience with
             other frontend technologies such as React and Vue.js.
           </p>
-          <h5
+          <button
             (click)="scroll(Projects)"
-            class="mt-4 md:mt-8 block cursor-pointer"
+            class="!bg-transparent p-0 text-gray-800 mt-4 md:mt-8 shadow-none"
           >
             See Projects
-          </h5>
+          </button>
         </div>
         <div class="w-full flex justify-end md:justify-center md:w-1/3">
           <ng-lottie class="w-20 md:w-44" [options]="catLottie"></ng-lottie>
@@ -78,25 +78,6 @@
   </section>
 </section>
 
-<!-- Photography Section -->
-
-<!-- <section class="mt-8 md:mt-24 flex justify-center">
-
-    <section class="w-full contCards px-7 sm:px-0">
-
-        <div>
-            <h3>Photography📸 & Art🎨</h3>
-            <h6>I love art and photography.</h6>
-        </div>
-
-        <div class="mt-8">
-            <app-gallery-slider></app-gallery-slider>
-
-        </div>
-    </section>
-
-
-</section> -->
 
 <!-- Works Section -->
 <section
@@ -107,7 +88,7 @@
   <section class="w-full contCards xl:max-w-[1050px] lg:-mr-20">
     <div>
       <h3>Works🗂️</h3>
-      <h6>Featured projects</h6>
+      <h4 class="text-sm">Featured projects</h4>
     </div>
 
     <div class="mt-8 grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -136,7 +117,7 @@
   <section class="w-full contCards lg:-ml-20 overflow-hidden">
     <div>
       <h3>Technologies🪚</h3>
-      <h6>Framework & tools I use...</h6>
+      <p>Framework & tools I use...</p>
     </div>
 
     <div class="mt-4 md:mt-6 grid grid-cols-6 gap-4 overflow-x-auto">
@@ -198,7 +179,7 @@
           <p class="mt-3">Get in touch and let's discuss.</p>
         </div>
         <div class="mt-4 w-full md:w-1/2 flex justify-start md:justify-center">
-          <button class="bg-orange-600 w-fit h-fit" routerLink="contact">
+          <button class="bg-orange-900 w-fit h-fit" routerLink="contact">
             Let's Chat
           </button>
         </div>
