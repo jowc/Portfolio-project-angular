@@ -1,5 +1,5 @@
 .active {
-  @apply bg-primary-500/80 font-semibold text-white py-3 cursor-pointer transition-colors;
+  @apply bg-primary-500/80 font-semibold text-white w-full py-3 cursor-pointer transition-colors;
 }
 
 .inactive {

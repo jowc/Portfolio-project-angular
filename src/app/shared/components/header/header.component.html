@@ -64,9 +64,9 @@
         <ul class="text-center font-medium grid">
           <li  class="hover-menu">
             <a
+            class="block"
               routerLink="/"
               fragment="heroContainer"
-              (click)="onClick('heroContainer')"
               [class.active]="(activeFragment | async) === ''"
             >
               <span>Home</span>
@@ -75,10 +75,10 @@
 
           <li  class="hover-menu">
             <a
+            class="block"
               routerLink="/"
               fragment="Projects"
               [class.active]="(activeFragment | async) === 'Projects'"
-              (click)="onClick('Projects')"
             >
               <span>Projects</span>
             </a>
@@ -91,13 +91,14 @@
 
           <li  class="hover-menu">
 
-            <a href="https://medium.com/@ojiofor" rel="nofollow">
+            <a class="block" href="https://medium.com/@ojiofor" rel="nofollow">
               <span>Blog</span>
             </a>
           </li>
 
           <li  class="hover-menu">
             <a
+            class="block"
               routerLink="/contact"
               routerLinkActive="active"
               [routerLinkActiveOptions]="{ exact: true }"
