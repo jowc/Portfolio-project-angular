@@ -1,0 +1,16 @@
+# Simple Dockerfile using pre-built application
+# This approach uses a pre-built Angular application to avoid build issues in Docker environment
+
+FROM nginx:alpine
+
+# Copy the pre-built application 
+COPY dist/joecdev/browser /usr/share/nginx/html
+
+# Copy custom nginx configuration
+COPY nginx.conf /etc/nginx/conf.d/default.conf
+
+# Expose port 80
+EXPOSE 80
+
+# Start nginx
+CMD ["nginx", "-g", "daemon off;"]
