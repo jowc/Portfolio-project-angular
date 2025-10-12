@@ -5,6 +5,20 @@ export const sendgridKey: string =
 
 export const projects: projectModel[] = [
   {
+    link: 'https://optimaconnect.io/',
+    img: 'https://res.cloudinary.com/drbrbpqdn/image/upload/v1760273695/Joecdev/Screenshot_2025-10-12_at_3.43.07_PM_jqtquv.jpg',
+    stacks: ['Next JS', 'Nest JS', 'Tailwind CSS', 'Mongo'],
+    description:
+      'Optima connect links various data analytics sources to your preferred cloud storage provider.',
+  },
+  {
+    link: 'https://optimawebsolutions.com/',
+    img: 'https://res.cloudinary.com/drbrbpqdn/image/upload/v1760273695/Joecdev/Screenshot_2025-10-12_at_3.42.38_PM_z4hr1f.jpg',
+    stacks: ['WordPress', 'Elementor', 'PHP', 'CSS'],
+    description:
+      'Optima Web Solutions is a web development agency that builds custom digital solutions for their clients.',
+  },
+  {
     link: 'https://lentii.com/',
     img: 'https://res.cloudinary.com/drbrbpqdn/image/upload/v1684966418/Joecdev/Screenshot_2023-05-24_at_10.55.40_PM_Large_q3hwdf.jpg',
     stacks: ['Angular', 'Tailwind CSS', 'NG Boostrap'],
