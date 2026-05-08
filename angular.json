@@ -33,7 +33,7 @@
               "./node_modules/swiper/swiper-bundle.min.css"
             ],
             "scripts": ["./src/assets/smtp.js"],
-            "allowedCommonJsDependencies": ["lodash"],
+            "allowedCommonJsDependencies": ["lodash", "lottie-web"],
             "browser": "src/main.ts"
           },
           "configurations": {
