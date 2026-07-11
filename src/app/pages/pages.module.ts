@@ -4,7 +4,7 @@ import { RouterModule } from '@angular/router';
 import { FormsModule } from '@angular/forms';
 
 import { NgxParticlesModule } from '@tsparticles/angular';
-import { LottieModule } from 'ngx-lottie';
+import { LottieComponent } from 'ngx-lottie';
 import { SharedModule } from '../shared/shared.module';
 
 import { NotFoundComponent } from './not-found/not-found.component';
@@ -17,7 +17,7 @@ import { ContactComponent } from './contact/contact.component';
     CommonModule,
     RouterModule,
     FormsModule,
-    LottieModule,
+    LottieComponent,
     SharedModule,
     NgxParticlesModule,
   ],

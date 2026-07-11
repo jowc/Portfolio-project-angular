@@ -7,7 +7,7 @@ import { StoreDevtoolsModule } from '@ngrx/store-devtools';
 
 import { environment } from 'src/environments/environment';
 import { AppRoutingModule } from './app-routing.module';
-import { LottieModule } from 'ngx-lottie';
+import { provideLottieOptions } from 'ngx-lottie';
 import player from 'lottie-web';
 import * as fromRoot from './store/app.state';
 
@@ -22,11 +22,6 @@ import { EffectsModule } from '@ngrx/effects';
 import { projectEffects } from './pages/store/pages.effects';
 
 
-export function playerFactory() {
-  return player;
-}
-
-
 @NgModule({
   declarations: [
     AppComponent,
@@ -37,7 +32,6 @@ export function playerFactory() {
     EffectsModule.forRoot([projectEffects]),
     BrowserAnimationsModule,
     AppRoutingModule,
-    LottieModule.forRoot({ player: playerFactory }),
     SharedModule,
     BlogModule,
     AdminModule,
@@ -48,7 +42,7 @@ export function playerFactory() {
       autoPause: true,
     connectInZone: true}),
   ],
-  providers: [],
+  providers: [provideLottieOptions({ player: () => player })],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
