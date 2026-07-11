@@ -1,45 +1,49 @@
 <section id="hero" class="mt-28 md:mt-40 mb-12 relative" #heroContainer>
 
-    <div class="flex justify-center" *ngIf="sentForm">
-        <div class="sentMessage">Hi {{fullname}}, your message has been sent
-            successfully😊</div>
-    </div>
-
     <div class="flex justify-center">
 
-        <form class="cForm overflow-hidden" #cForm="ngForm" *ngIf="!sentForm">
+        <form class="cForm overflow-hidden" [formGroup]="contactForm" netlify>
             <div class="mb-3">
                 <span class="font-gray-500 font-medium">Get in touch ✌🏾</span>
             </div>
             <div>
                 <input id="name" class="w-full" name="name" type="text" aria-label="full name" placeholder="Full Name" required minlength="3"
-                    [(ngModel)]="fullname">
-                     <div *ngIf="cForm && cForm.submitted" class="text-red-600">
-                         All fields should be filled correctly.
-                    </div>
+                    formControlName="fullname">
+                    @if (fullname!.touched && fullname!.invalid) {
+                        <div class="text-red-600">
+                            This field is required and should be at least 3 characters long.
+                       </div>
+                    }
             </div>
             <div>
                 <input id="email" class="w-full" name="email" type="email" placeholder="Primary Email" required
-                    minlength="6" pattern="[^ @]*@[^ @]*" [(ngModel)]="email">
+                    formControlName="email">
+                    @if (email!.invalid && email!.touched) {
+                        <div class="text-red-600">
+                            This field is required and should be a valid email address.
+                       </div>
+                    }
             </div>
             <div>
                 <textarea name="senderMessage" id="message" class="w-full" rows="4" placeholder="Message here" required
-                    [(ngModel)]="senderMessage"></textarea>
+                    formControlName="senderMessage"></textarea>
+                    @if (senderMessage!.invalid && senderMessage!.touched) {
+                        <div class="text-red-600">
+                            This field is required and should be at least 10 characters long.
+                       </div>
+                    }
             </div>
             <div>
-                <button [disabled]="cForm.invalid || sendingM" (click)="submit(cForm)">
-                    <ng-container *ngIf="!sendingM; else btnLoadingText">Send Message</ng-container>
-                    <ng-template #btnLoadingText>Sending...</ng-template>
+                <button type="submit" [disabled]="contactForm.invalid">
+                    Send Message
                 </button>
             </div>
 
-            <!-- <div class="overflow-auto whitespace-pre-wrap">
-                <pre>{{cForm.value | json}}</pre>
-            </div> -->
-
-            <span *ngIf="cForm.invalid && cForm.submitted" class="text-red-600">
-                All fields should be filled correctly.
-            </span>
+            @if (contactForm.invalid && contactForm.touched) {
+                <span class="text-red-600">
+                    All fields should be filled correctly.
+                </span>
+            }
         </form>
 
     </div>

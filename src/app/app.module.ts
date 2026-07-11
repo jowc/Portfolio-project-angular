@@ -1,6 +1,5 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { StoreModule } from '@ngrx/store';
 import { StoreDevtoolsModule } from '@ngrx/store-devtools';
 
@@ -23,14 +22,11 @@ import { projectEffects } from './pages/store/pages.effects';
 
 
 @NgModule({
-  declarations: [
-    AppComponent,
-  ],
+  declarations: [AppComponent],
   imports: [
     BrowserModule,
     StoreModule.forRoot(fromRoot.AppReducer),
     EffectsModule.forRoot([projectEffects]),
-    BrowserAnimationsModule,
     AppRoutingModule,
     SharedModule,
     BlogModule,
@@ -40,9 +36,10 @@ import { projectEffects } from './pages/store/pages.effects';
       maxAge: 25,
       logOnly: environment.production,
       autoPause: true,
-    connectInZone: true}),
+      connectInZone: true,
+    }),
   ],
   providers: [provideLottieOptions({ player: () => player })],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}
