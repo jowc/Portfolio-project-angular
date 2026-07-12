@@ -27,7 +27,15 @@
             "polyfills": ["src/polyfills.ts"],
             "tsConfig": "tsconfig.app.json",
             "inlineStyleLanguage": "scss",
-            "assets": ["src/favicon.ico", "src/assets"],
+            "assets": [
+              "src/favicon.ico",
+              "src/assets",
+              {
+                "glob": "__forms.html",
+                "input": "src",
+                "output": "/"
+              }
+            ],
             "styles": [
               "src/styles.scss",
               "./node_modules/swiper/swiper-bundle.min.css"
