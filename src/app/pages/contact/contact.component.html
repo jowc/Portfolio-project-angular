@@ -2,7 +2,7 @@
 
     <div class="flex justify-center">
 
-        <form class="cForm overflow-hidden" [formGroup]="contactForm" netlify>
+        <form name="contact" class="cForm overflow-hidden" [formGroup]="contactForm" netlify>
             <div class="mb-3">
                 <span class="font-gray-500 font-medium">Get in touch ✌🏾</span>
             </div>
@@ -25,7 +25,7 @@
                     }
             </div>
             <div>
-                <textarea name="senderMessage" id="message" class="w-full" rows="4" placeholder="Message here" required
+                <textarea name="message" id="message" class="w-full" rows="4" placeholder="Message here" required
                     formControlName="senderMessage"></textarea>
                     @if (senderMessage!.invalid && senderMessage!.touched) {
                         <div class="text-red-600">
