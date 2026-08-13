@@ -60,13 +60,13 @@ export const projects: projectModel[] = [
     description:
       "My portfolio website. It's the site you're looking at currently. It's developed with Angular as the front-end and StrapiJs as the headless CMS backend.",
   },
-  {
-    link: 'https://fardelins.com',
-    img: 'https://res.cloudinary.com/dt8umwrcb/image/upload/v1648926926/portfolio/fardelins_rulesd.jpg',
-    stacks: ['NodeJs', 'Angular', 'Tailwind CSS'],
-    description:
-      "This is a side project I'm working on. It's a SaaS Courier Management System developed from scratch with Angular, Angular material, and NodeJS. Its features include delivery management, dispatch tracking, and lots more.",
-  },
+  // {
+  //   link: 'https://fardelins.com',
+  //   img: 'https://res.cloudinary.com/dt8umwrcb/image/upload/v1648926926/portfolio/fardelins_rulesd.jpg',
+  //   stacks: ['NodeJs', 'Angular', 'Tailwind CSS'],
+  //   description:
+  //     "This is a side project I'm working on. It's a SaaS Courier Management System developed from scratch with Angular, Angular material, and NodeJS. Its features include delivery management, dispatch tracking, and lots more.",
+  // },
   {
     link: 'https://chuuse.org',
     img: 'https://res.cloudinary.com/dt8umwrcb/image/upload/v1648926925/portfolio/chuuse_udvoq0.jpg',
